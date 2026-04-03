@@ -48,11 +48,11 @@ const tips = [
 export default function BlogPost() {
   return (
     <>
-      <article className="py-16 md:py-24 bg-cream">
+      <article className="pt-32 pb-16 md:pt-40 md:pb-24 bg-dark">
         <div className="max-w-3xl mx-auto px-4">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-red-800 hover:text-red-900 font-semibold text-sm mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-gold hover:text-gold-light font-semibold text-sm mb-8 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
@@ -62,15 +62,15 @@ export default function BlogPost() {
 
           <div className="flex items-center gap-3 mb-4">
             <span className="text-xs font-semibold text-gold bg-gold/10 px-3 py-1 rounded-full">Catering Tips</span>
-            <span className="text-xs text-charcoal-light/50">February 28, 2026</span>
-            <span className="text-xs text-charcoal-light/50">4 min read</span>
+            <span className="text-xs text-cream/30">February 28, 2026</span>
+            <span className="text-xs text-cream/30">4 min read</span>
           </div>
 
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6 leading-tight">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6 leading-tight">
             7 Catering Tips That Will Make Your Next Event Unforgettable
           </h1>
 
-          <div className="space-y-4 text-charcoal-light/80 leading-relaxed mb-10">
+          <div className="space-y-4 text-cream/60 leading-relaxed mb-10">
             <p>
               After more than 40 years of catering events across the Philadelphia area, we&apos;ve seen
               it all &mdash; the good, the great, and the &ldquo;we should have planned that better.&rdquo;
@@ -81,36 +81,36 @@ export default function BlogPost() {
 
           <div className="space-y-8">
             {tips.map((tip) => (
-              <div key={tip.number} className="bg-white rounded-2xl p-6 border border-cream-dark">
+              <div key={tip.number} className="bg-dark-card rounded-2xl p-6 border border-dark-border">
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 bg-red-800 text-cream rounded-full flex items-center justify-center text-lg font-bold font-serif shrink-0">
+                  <div className="w-10 h-10 bg-gold/20 text-gold rounded-full flex items-center justify-center text-lg font-bold font-serif shrink-0 border border-gold/30">
                     {tip.number}
                   </div>
                   <div>
-                    <h2 className="font-serif text-xl font-bold text-charcoal mb-2">{tip.title}</h2>
-                    <p className="text-charcoal-light/70 leading-relaxed">{tip.body}</p>
+                    <h2 className="font-serif text-xl font-bold text-cream mb-2">{tip.title}</h2>
+                    <p className="text-cream/50 leading-relaxed">{tip.body}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 p-6 bg-white rounded-2xl border border-cream-dark">
-            <h3 className="font-serif text-lg font-bold mb-2">Ready to Plan Your Event?</h3>
-            <p className="text-sm text-charcoal-light/70 mb-4">
+          <div className="mt-12 p-6 bg-dark-card rounded-2xl border border-dark-border">
+            <h3 className="font-serif text-lg font-bold mb-2 text-cream">Ready to Plan Your Event?</h3>
+            <p className="text-sm text-cream/50 mb-4">
               Let T&N Homemade Kitchen handle the food so you can focus on everything else. We&apos;ve
               been doing this since 1980 — we know how to make your event special.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/catering"
-                className="bg-gold hover:bg-gold-light text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-colors"
+                className="bg-gold hover:bg-gold-light text-dark px-6 py-2.5 rounded-full text-sm font-semibold transition-colors"
               >
                 View Catering Menu
               </Link>
               <Link
                 href="/food-truck"
-                className="border border-charcoal-light/20 text-charcoal hover:border-gold hover:text-gold px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
+                className="border border-cream/20 text-cream hover:border-gold hover:text-gold px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
               >
                 Book the Jeet? Mobile
               </Link>

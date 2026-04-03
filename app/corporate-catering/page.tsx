@@ -62,17 +62,18 @@ export default function CorporateCateringPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-charcoal to-charcoal-light text-cream py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,165,116,0.08),transparent_60%)]" />
+        <div className="relative max-w-7xl mx-auto px-4">
           <div className="max-w-3xl">
             <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
               Corporate Catering
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">
               Feed Your Team<br />
               <span className="text-gold">the Homemade Way</span>
             </h1>
-            <p className="text-cream/70 text-lg mb-8 leading-relaxed">
+            <p className="text-cream/60 text-lg mb-8 leading-relaxed">
               Tired of the same boring corporate lunch? T&N Homemade Kitchen brings South Philly&apos;s
               best to your office. From recurring lunch programs to one-time team events, we make
               corporate catering that people actually look forward to.
@@ -80,13 +81,13 @@ export default function CorporateCateringPage() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="tel:2677670073"
-                className="bg-gold hover:bg-gold-light text-white px-8 py-3 rounded-full font-semibold transition-colors"
+                className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
               >
                 Call Michael: 267-767-0073
               </a>
               <a
                 href="mailto:michael@tnhomemadekitchen.com?subject=Corporate%20Catering%20Inquiry"
-                className="border-2 border-cream/30 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+                className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
               >
                 Email for a Quote
               </a>
@@ -95,8 +96,10 @@ export default function CorporateCateringPage() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Why Choose T&N */}
-      <section className="py-16 md:py-24 bg-cream">
+      <section className="py-24 md:py-32 bg-dark-light">
         <div className="max-w-6xl mx-auto px-4">
           <SectionHeading
             title="Why Companies Choose T&N"
@@ -106,21 +109,23 @@ export default function CorporateCateringPage() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-cream-dark"
+                className="bg-dark-card rounded-2xl p-6 border border-dark-border"
               >
-                <div className="w-12 h-12 bg-red-800/10 text-red-800 rounded-xl flex items-center justify-center mb-4 text-xl font-bold">
+                <div className="w-12 h-12 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-4 text-xl font-bold">
                   {benefit.icon}
                 </div>
-                <h3 className="font-serif text-lg font-bold mb-2">{benefit.title}</h3>
-                <p className="text-sm text-charcoal-light/70 leading-relaxed">{benefit.description}</p>
+                <h3 className="font-serif text-lg font-bold mb-2 text-cream">{benefit.title}</h3>
+                <p className="text-sm text-cream/50 leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Event Types */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-24 md:py-32 bg-dark">
         <div className="max-w-5xl mx-auto px-4">
           <SectionHeading
             title="We Cater Every Type of Event"
@@ -130,22 +135,24 @@ export default function CorporateCateringPage() {
             {eventTypes.map((event) => (
               <div
                 key={event}
-                className="flex items-center gap-3 bg-cream rounded-xl p-4 border border-cream-dark"
+                className="flex items-center gap-3 bg-dark-card rounded-xl p-4 border border-dark-border"
               >
                 <div className="w-8 h-8 bg-gold/10 text-gold rounded-full flex items-center justify-center shrink-0">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="font-medium text-charcoal">{event}</span>
+                <span className="font-medium text-cream">{event}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* How It Works */}
-      <section className="py-16 md:py-24 bg-cream">
+      <section className="py-24 md:py-32 bg-dark-light">
         <div className="max-w-5xl mx-auto px-4">
           <SectionHeading
             title="How It Works"
@@ -170,43 +177,47 @@ export default function CorporateCateringPage() {
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-16 h-16 bg-red-800 text-cream rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold font-serif">
+                <div className="w-16 h-16 bg-gold/20 text-gold rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold font-serif border border-gold/30">
                   {item.step}
                 </div>
-                <h3 className="font-serif text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-sm text-charcoal-light/70 leading-relaxed">{item.description}</p>
+                <h3 className="font-serif text-xl font-bold mb-2 text-cream">{item.title}</h3>
+                <p className="text-sm text-cream/50 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* CTA */}
-      <section className="py-16 md:py-24 bg-red-900 text-cream">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-red-800 to-red-900" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.1),transparent_70%)]" />
+        <div className="relative max-w-4xl mx-auto px-4 text-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">
             Get a Corporate Catering Quote
           </h2>
-          <p className="text-cream/70 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-cream/60 text-lg mb-8 max-w-xl mx-auto">
             Let&apos;s talk about feeding your team. Whether it&apos;s a one-time event or a recurring program,
             we&apos;ll create a custom plan that works for you.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:2677670073"
-              className="bg-gold hover:bg-gold-light text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
             >
               Call Michael: 267-767-0073
             </a>
             <a
               href="mailto:michael@tnhomemadekitchen.com?subject=Corporate%20Catering%20Quote"
-              className="bg-white text-red-900 hover:bg-cream px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-cream text-dark hover:bg-cream-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
             >
               Email for a Quote
             </a>
             <Link
               href="/catering"
-              className="border-2 border-cream/30 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
             >
               View Catering Menu
             </Link>

@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 export default function BlogPost() {
   return (
     <>
-      <article className="py-16 md:py-24 bg-cream">
+      <article className="pt-32 pb-16 md:pt-40 md:pb-24 bg-dark">
         <div className="max-w-3xl mx-auto px-4">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-red-800 hover:text-red-900 font-semibold text-sm mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-gold hover:text-gold-light font-semibold text-sm mb-8 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
@@ -24,16 +24,16 @@ export default function BlogPost() {
 
           <div className="flex items-center gap-3 mb-4">
             <span className="text-xs font-semibold text-gold bg-gold/10 px-3 py-1 rounded-full">Food Culture</span>
-            <span className="text-xs text-charcoal-light/50">March 15, 2026</span>
-            <span className="text-xs text-charcoal-light/50">5 min read</span>
+            <span className="text-xs text-cream/30">March 15, 2026</span>
+            <span className="text-xs text-cream/30">5 min read</span>
           </div>
 
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6 leading-tight">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6 leading-tight">
             The South Philly Food Scene: Why This Neighborhood Still Has the Best Eats in the City
           </h1>
 
           <div className="prose prose-lg max-w-none">
-            <div className="space-y-6 text-charcoal-light/80 leading-relaxed">
+            <div className="space-y-6 text-cream/60 leading-relaxed">
               <p>
                 There&apos;s a reason people from all over Philadelphia &mdash; and far beyond &mdash; make the
                 trip to South Philly when they want real food. This isn&apos;t a neighborhood of trends and
@@ -41,7 +41,7 @@ export default function BlogPost() {
                 doing things the right way.
               </p>
 
-              <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
+              <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
                 The Italian Market: Where It All Starts
               </h2>
               <p>
@@ -51,7 +51,7 @@ export default function BlogPost() {
                 a farmers market that shows up on Saturdays &mdash; this is everyday life in South Philly.
               </p>
 
-              <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
+              <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
                 The Corner Deli: A Dying Art?
               </h2>
               <p>
@@ -67,7 +67,7 @@ export default function BlogPost() {
                 know your order before you open your mouth.
               </p>
 
-              <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
+              <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
                 New Energy, Same Soul
               </h2>
               <p>
@@ -83,7 +83,7 @@ export default function BlogPost() {
                 neighborhood institution in the first place.
               </p>
 
-              <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
+              <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
                 Come Taste the Difference
               </h2>
               <p>
@@ -95,20 +95,20 @@ export default function BlogPost() {
             </div>
           </div>
 
-          <div className="mt-12 p-6 bg-white rounded-2xl border border-cream-dark">
-            <p className="text-sm text-charcoal-light/70 mb-4">
+          <div className="mt-12 p-6 bg-dark-card rounded-2xl border border-dark-border">
+            <p className="text-sm text-cream/50 mb-4">
               Want to bring the South Philly experience to your next event?
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/catering"
-                className="bg-gold hover:bg-gold-light text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-colors"
+                className="bg-gold hover:bg-gold-light text-dark px-6 py-2.5 rounded-full text-sm font-semibold transition-colors"
               >
                 View Catering Menu
               </Link>
               <a
                 href="tel:2677670073"
-                className="border border-charcoal-light/20 text-charcoal hover:border-gold hover:text-gold px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
+                className="border border-cream/20 text-cream hover:border-gold hover:text-gold px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
               >
                 Call Michael: 267-767-0073
               </a>

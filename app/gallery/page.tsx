@@ -13,38 +13,41 @@ export const metadata: Metadata = {
 };
 
 const galleryItems = [
-  { label: "Frankie Five Stents", emoji: "🥪", category: "Sandwiches" },
-  { label: "Sunday Gravy", emoji: "🍝", category: "Sandwiches" },
-  { label: "Cubano Paesano", emoji: "🥖", category: "Sandwiches" },
-  { label: "Breakfast Platter", emoji: "🍳", category: "Breakfast" },
-  { label: "Catering Spread", emoji: "🍽", category: "Catering" },
-  { label: "Sandwich Tray", emoji: "🥪", category: "Catering" },
-  { label: "Hors D'oeuvres", emoji: "🦐", category: "Catering" },
-  { label: "Antipasto Platter", emoji: "🧀", category: "Catering" },
-  { label: "Jeet? Mobile", emoji: "🚚", category: "Food Truck" },
-  { label: "Food Truck Event", emoji: "🎪", category: "Food Truck" },
-  { label: "Wedding Catering", emoji: "💍", category: "Events" },
-  { label: "Corporate Event", emoji: "🏢", category: "Events" },
-  { label: "The Kitchen", emoji: "👨‍🍳", category: "Behind the Scenes" },
-  { label: "South Philly Love", emoji: "❤", category: "Community" },
-  { label: "Family Tradition", emoji: "👨‍👩‍👦", category: "Community" },
+  { label: "Frankie Five Stents", category: "Sandwiches", src: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600&q=80" },
+  { label: "Sunday Gravy", category: "Sandwiches", src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" },
+  { label: "Cubano Paesano", category: "Sandwiches", src: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600&q=80" },
+  { label: "Breakfast Platter", category: "Breakfast", src: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=80" },
+  { label: "Catering Spread", category: "Catering", src: "https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" },
+  { label: "Sandwich Tray", category: "Catering", src: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600&q=80" },
+  { label: "Hors D'oeuvres", category: "Catering", src: "https://images.unsplash.com/photo-1530062845289-9109b2c9c868?w=600&q=80" },
+  { label: "Antipasto Platter", category: "Catering", src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" },
+  { label: "Jeet? Mobile", category: "Food Truck", src: "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=600&q=80" },
+  { label: "Food Truck Event", category: "Food Truck", src: "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=600&q=80" },
+  { label: "Wedding Catering", category: "Events", src: "https://images.unsplash.com/photo-1530062845289-9109b2c9c868?w=600&q=80" },
+  { label: "Corporate Event", category: "Events", src: "https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80" },
+  { label: "The Kitchen", category: "Behind the Scenes", src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&q=80" },
+  { label: "South Philly Love", category: "Community", src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" },
+  { label: "Family Tradition", category: "Community", src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&q=80" },
 ];
 
 export default function GalleryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-cream py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Gallery</h1>
-          <p className="text-cream/70 text-lg max-w-xl mx-auto">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
+        <div className="relative max-w-7xl mx-auto px-4 text-center">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Gallery</h1>
+          <p className="text-cream/60 text-lg max-w-xl mx-auto">
             A look at the food, the events, and the people that make T&N Homemade Kitchen special.
           </p>
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Gallery Grid */}
-      <section className="py-16 md:py-24 bg-cream">
+      <section className="py-24 md:py-32 bg-dark-light">
         <div className="max-w-6xl mx-auto px-4">
           <SectionHeading
             title="Our Food & Events"
@@ -54,12 +57,18 @@ export default function GalleryPage() {
             {galleryItems.map((item, i) => (
               <div
                 key={i}
-                className="group relative aspect-square rounded-2xl bg-gradient-to-br from-red-800/10 to-gold/10 border border-cream-dark overflow-hidden hover:shadow-lg transition-all"
+                className="group relative aspect-square rounded-2xl overflow-hidden border border-dark-border"
               >
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-                  <span className="text-4xl mb-2 group-hover:scale-110 transition-transform">{item.emoji}</span>
-                  <span className="text-sm font-semibold text-charcoal text-center">{item.label}</span>
-                  <span className="text-xs text-charcoal-light/50 mt-1">{item.category}</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.src}
+                  alt={item.label}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <span className="text-sm font-semibold text-cream block">{item.label}</span>
+                  <span className="text-xs text-cream/50">{item.category}</span>
                 </div>
               </div>
             ))}
@@ -81,23 +90,27 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* CTA */}
-      <section className="py-12 bg-red-900 text-cream">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">Like What You See?</h2>
-          <p className="text-cream/70 mb-6">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-red-800 to-red-900" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.1),transparent_70%)]" />
+        <div className="relative max-w-4xl mx-auto px-4 text-center">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-cream">Like What You See?</h2>
+          <p className="text-cream/60 mb-6">
             Let us bring the T&N experience to your next event.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/catering"
-              className="bg-gold hover:bg-gold-light text-white px-8 py-3 rounded-full font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
             >
               Order Catering
             </Link>
             <Link
               href="/food-truck"
-              className="border-2 border-cream/30 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
             >
               Book the Food Truck
             </Link>

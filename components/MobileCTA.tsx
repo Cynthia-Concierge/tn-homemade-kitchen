@@ -2,7 +2,7 @@
 
 export default function MobileCTA() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-red-900 border-t border-white/10 px-4 py-2 flex gap-2 safe-area-bottom">
+    <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-dark/95 backdrop-blur-md border-t border-dark-border px-4 py-2 flex gap-2 safe-area-bottom">
       <a
         href="tel:2154621095"
         className="flex-1 flex items-center justify-center gap-2 bg-white/10 text-cream py-2.5 rounded-full text-sm font-semibold"
@@ -14,7 +14,7 @@ export default function MobileCTA() {
       </a>
       <a
         href="/catering"
-        className="flex-1 flex items-center justify-center gap-2 bg-gold text-white py-2.5 rounded-full text-sm font-semibold"
+        className="flex-1 flex items-center justify-center gap-2 bg-gold text-dark py-2.5 rounded-full text-sm font-semibold"
       >
         Order Catering
       </a>

@@ -99,37 +99,53 @@ export default function CateringPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-cream py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
-            Full-Service Catering
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Catering Menu</h1>
-          <p className="text-cream/70 text-lg max-w-2xl mx-auto mb-8">
-            From intimate dinners to 500-person events, T&N Homemade Kitchen brings the homemade
-            difference to every catering order. Everything made fresh, in-house, with love.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="tel:2677670073"
-              className="bg-gold hover:bg-gold-light text-white px-8 py-3 rounded-full font-semibold transition-colors"
-            >
-              Call Michael: 267-767-0073
-            </a>
-            <a
-              href="https://www.ezcater.com/brand/pvt/t-and-n-homemade-kitchen"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-cream/30 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
-            >
-              Order on ezCater
-            </a>
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
+        <div className="relative max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
+                Full-Service Catering
+              </p>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Catering Menu</h1>
+              <p className="text-cream/60 text-lg max-w-2xl mx-auto lg:mx-0 mb-8">
+                From intimate dinners to 500-person events, T&N Homemade Kitchen brings the homemade
+                difference to every catering order. Everything made fresh, in-house, with love.
+              </p>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                <a
+                  href="tel:2677670073"
+                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
+                >
+                  Call Michael: 267-767-0073
+                </a>
+                <a
+                  href="https://www.ezcater.com/brand/pvt/t-and-n-homemade-kitchen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+                >
+                  Order on ezCater
+                </a>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden h-64 md:h-96 shadow-2xl shadow-black/40">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1555244162-803834f70033?w=800&q=80"
+                alt="T&N Homemade Kitchen catering spread"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent" />
+            </div>
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Menu Sections */}
-      <section className="py-16 md:py-24 bg-cream">
+      <section className="py-24 md:py-32 bg-dark">
         <div className="max-w-5xl mx-auto px-4 space-y-16">
           {cateringSections.map((section) => (
             <div key={section.title}>
@@ -138,17 +154,17 @@ export default function CateringPage() {
                 {section.items.map((item) => (
                   <div
                     key={item.name}
-                    className="bg-white rounded-xl p-5 shadow-sm border border-cream-dark hover:shadow-md transition-shadow"
+                    className="bg-dark-card rounded-xl p-5 border border-dark-border hover:border-gold/30 transition-colors"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1">
-                        <h3 className="font-serif text-base font-bold text-charcoal">{item.name}</h3>
+                        <h3 className="font-serif text-base font-bold text-cream">{item.name}</h3>
                         {item.description && (
-                          <p className="text-sm text-charcoal-light/70 mt-1">{item.description}</p>
+                          <p className="text-sm text-cream/50 mt-1">{item.description}</p>
                         )}
                       </div>
                       {item.price && (
-                        <span className="text-gold font-bold text-sm whitespace-nowrap bg-gold/5 px-3 py-1 rounded-full">
+                        <span className="text-gold font-bold text-sm whitespace-nowrap bg-gold/10 px-3 py-1 rounded-full">
                           {item.price}
                         </span>
                       )}
@@ -161,8 +177,10 @@ export default function CateringPage() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Service Options */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-24 md:py-32 bg-dark-light">
         <div className="max-w-5xl mx-auto px-4">
           <SectionHeading
             title="Service Options"
@@ -170,20 +188,22 @@ export default function CateringPage() {
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {serviceOptions.map((option, i) => (
-              <div key={option.title} className="text-center p-6 rounded-2xl bg-cream border border-cream-dark">
-                <div className="w-12 h-12 bg-red-800/10 text-red-800 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold font-serif">
+              <div key={option.title} className="text-center p-6 rounded-2xl bg-dark-card border border-dark-border">
+                <div className="w-12 h-12 bg-gold/10 text-gold rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold font-serif">
                   {i + 1}
                 </div>
-                <h3 className="font-serif text-lg font-bold mb-2">{option.title}</h3>
-                <p className="text-sm text-charcoal-light/70">{option.description}</p>
+                <h3 className="font-serif text-lg font-bold mb-2 text-cream">{option.title}</h3>
+                <p className="text-sm text-cream/50">{option.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Rentals */}
-      <section className="py-16 md:py-24 bg-cream">
+      <section className="py-24 md:py-32 bg-dark">
         <div className="max-w-5xl mx-auto px-4">
           <SectionHeading
             title="Rentals & Add-Ons"
@@ -193,47 +213,51 @@ export default function CateringPage() {
             {rentals.map((item) => (
               <div
                 key={item.name}
-                className="bg-white rounded-xl p-5 shadow-sm border border-cream-dark"
+                className="bg-dark-card rounded-xl p-5 border border-dark-border"
               >
                 <div className="flex justify-between items-start gap-2">
-                  <h3 className="font-semibold text-charcoal">{item.name}</h3>
+                  <h3 className="font-semibold text-cream">{item.name}</h3>
                   {item.price && (
                     <span className="text-gold font-bold text-sm whitespace-nowrap">{item.price}</span>
                   )}
                 </div>
-                <p className="text-sm text-charcoal-light/70 mt-1">{item.description}</p>
+                <p className="text-sm text-cream/50 mt-1">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Quote CTA */}
-      <section className="py-16 md:py-24 bg-red-900 text-cream">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-red-800 to-red-900" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.1),transparent_70%)]" />
+        <div className="relative max-w-4xl mx-auto px-4 text-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">
             Ready to Get a Quote?
           </h2>
-          <p className="text-cream/70 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-cream/60 text-lg mb-8 max-w-xl mx-auto">
             Tell us about your event and we&apos;ll put together a custom catering package that fits your
             needs and budget. No event is too big or too small.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:2677670073"
-              className="bg-gold hover:bg-gold-light text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
             >
               Call Michael: 267-767-0073
             </a>
             <a
               href="mailto:michael@tnhomemadekitchen.com"
-              className="border-2 border-cream/30 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
             >
               Email for a Quote
             </a>
             <Link
               href="/corporate-catering"
-              className="text-cream/60 hover:text-gold px-4 py-4 text-lg font-medium transition-colors underline"
+              className="text-cream/40 hover:text-gold px-4 py-4 text-lg font-medium transition-colors underline"
             >
               Corporate Catering
             </Link>

@@ -6,21 +6,25 @@ const featuredItems = [
     name: "Frankie Five Stents",
     price: "$15",
     description: "Our legendary signature sandwich that keeps 'em coming back. A South Philly classic you won't find anywhere else.",
+    image: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600&q=80",
   },
   {
     name: "Sunday Gravy",
     price: "$10",
     description: "Homemade Sunday gravy the way nonna used to make it. Slow-cooked, rich, and full of love.",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80",
   },
   {
     name: "Cubano Paesano",
     price: null,
     description: "Our award-winning Cuban sandwich with an Italian twist. Available as a hot sandwich tray for catering.",
+    image: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600&q=80",
   },
   {
     name: "Breakfast Italiano",
     price: null,
     description: "Start your morning the South Philly way. Fresh eggs, Italian meats, and everything made from scratch.",
+    image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=80",
   },
 ];
 
@@ -67,61 +71,83 @@ export default function Home() {
   return (
     <>
       {/* Renovation Banner */}
-      <div className="bg-gold text-white text-center py-3 px-4 text-sm font-medium">
+      <div className="relative z-50 bg-gold/90 text-dark text-center py-3 px-4 text-sm font-medium">
         <span className="font-semibold">Renovation Update:</span> Our retail location is currently closed for renovations.
         We are <span className="font-semibold underline">fully open</span> for all catering orders, trays, and food truck events!{" "}
-        <a href="tel:2677670073" className="underline font-semibold hover:text-cream transition-colors">
+        <a href="tel:2677670073" className="underline font-semibold hover:text-red-900 transition-colors">
           Call Michael: 267-767-0073
         </a>
       </div>
 
-      {/* Hero */}
-      <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-cream overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,146,42,0.15),transparent_70%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(255,255,255,0.05),transparent_70%)]" />
-        <div className="relative max-w-7xl mx-auto px-4 py-20 md:py-32 lg:py-40">
-          <div className="max-w-3xl">
-            <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
-              Est. 1980 &bull; South Philadelphia
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Homemade Food.<br />
-              <span className="text-gold">Unforgettable Catering.</span>
-            </h1>
-            <p className="text-lg md:text-xl text-cream/80 mb-8 max-w-xl leading-relaxed">
-              Family-owned since 1980, T&N Homemade Kitchen has been the heart of South Philly dining.
-              From signature sandwiches to full-service catering for up to 500 guests, we bring the
-              homemade difference to every plate.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/catering"
-                className="bg-gold hover:bg-gold-light text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors shadow-lg shadow-gold/20"
-              >
-                Order Catering
-              </Link>
-              <Link
-                href="/food-truck"
-                className="border-2 border-cream/30 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
-              >
-                Book the Food Truck
-              </Link>
-              <a
-                href="tel:2154621095"
-                className="flex items-center gap-2 text-cream/70 hover:text-gold px-4 py-4 text-lg font-medium transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                215-462-1095
-              </a>
-            </div>
+      {/* Hero - Full Screen Ember & Oak Style */}
+      <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-dark">
+        {/* Background gradient overlays for smoky feel */}
+        <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/80 to-dark" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.08),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.15),transparent_60%)]" />
+
+        {/* Hero food image with glow */}
+        <div className="relative z-10 flex flex-col items-center">
+          {/* Orange glow behind image */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] bg-orange-600/20 rounded-full blur-3xl" />
+
+          {/* Restaurant name overlaid */}
+          <h1
+            className="relative z-20 font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-cream text-center mb-4 leading-tight"
+            style={{ textShadow: "0 4px 30px rgba(0,0,0,0.7), 0 2px 10px rgba(0,0,0,0.5)" }}
+          >
+            T&N Homemade<br />Kitchen
+          </h1>
+
+          {/* Food hero image */}
+          <div className="relative z-10 w-80 h-80 md:w-[480px] md:h-[480px] rounded-full overflow-hidden shadow-2xl shadow-black/50 border-2 border-gold/20 -mt-8">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1920&q=80"
+              alt="Delicious Italian food from T&N Homemade Kitchen"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Tagline */}
+          <p className="relative z-20 text-gold tracking-[0.3em] uppercase text-sm md:text-base font-medium mt-8">
+            Breakfast. Lunch. Catering.
+          </p>
+          <p className="relative z-20 text-cream/50 text-sm mt-2 tracking-wider">
+            Est. 1980 &bull; South Philadelphia
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="relative z-20 flex flex-wrap justify-center gap-4 mt-8">
+            <Link
+              href="/catering"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors shadow-lg shadow-gold/20"
+            >
+              Order Catering
+            </Link>
+            <Link
+              href="/food-truck"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
+            >
+              Book Food Truck
+            </Link>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+          <span className="text-cream/30 text-xs tracking-widest uppercase">Scroll</span>
+          <div className="w-6 h-10 rounded-full border-2 border-cream/20 flex items-start justify-center p-1.5">
+            <div className="w-1.5 h-1.5 rounded-full bg-gold animate-bounce-dot" />
           </div>
         </div>
       </section>
 
+      {/* Gradient divider */}
+      <div className="section-divider" />
+
       {/* Featured Menu Items */}
-      <section className="py-16 md:py-24 bg-cream">
+      <section className="py-24 md:py-32 bg-dark">
         <div className="max-w-7xl mx-auto px-4">
           <SectionHeading
             title="Fan Favorites"
@@ -131,25 +157,32 @@ export default function Home() {
             {featuredItems.map((item) => (
               <div
                 key={item.name}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-cream-dark"
+                className="bg-dark-card rounded-2xl overflow-hidden border border-dark-border hover:border-gold/30 transition-all group"
               >
-                <div className="w-full h-40 rounded-xl bg-gradient-to-br from-red-800/10 to-gold/10 mb-4 flex items-center justify-center">
-                  <span className="text-4xl">🥪</span>
+                <div className="w-full h-48 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <h3 className="font-serif text-lg font-bold text-charcoal">{item.name}</h3>
-                  {item.price && (
-                    <span className="text-gold font-bold text-lg whitespace-nowrap">{item.price}</span>
-                  )}
+                <div className="p-6">
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <h3 className="font-serif text-lg font-bold text-cream">{item.name}</h3>
+                    {item.price && (
+                      <span className="text-gold font-bold text-lg whitespace-nowrap">{item.price}</span>
+                    )}
+                  </div>
+                  <p className="text-sm text-cream/50 leading-relaxed">{item.description}</p>
                 </div>
-                <p className="text-sm text-charcoal-light/70 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-10">
             <Link
               href="/menu"
-              className="inline-flex items-center gap-2 text-red-800 hover:text-red-900 font-semibold text-lg transition-colors"
+              className="inline-flex items-center gap-2 text-gold hover:text-gold-light font-semibold text-lg transition-colors"
             >
               View Full Menu
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -160,8 +193,10 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-24 md:py-32 bg-dark-light">
         <div className="max-w-7xl mx-auto px-4">
           <SectionHeading
             title="Why Choose T&N?"
@@ -170,29 +205,77 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((item) => (
               <div key={item.title} className="text-center">
-                <div className="w-16 h-16 bg-red-800/5 text-red-800 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gold/10 text-gold rounded-2xl flex items-center justify-center mx-auto mb-4">
                   {item.icon}
                 </div>
-                <h3 className="font-serif text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-charcoal-light/70 text-sm leading-relaxed">{item.description}</p>
+                <h3 className="font-serif text-xl font-bold mb-2 text-cream">{item.title}</h3>
+                <p className="text-cream/50 text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Food Truck CTA */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-charcoal to-charcoal-light text-cream">
+      <div className="section-divider" />
+
+      {/* Catering Showcase */}
+      <section className="py-24 md:py-32 bg-dark">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative rounded-2xl overflow-hidden h-80 md:h-[500px]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1555244162-803834f70033?w=800&q=80"
+                alt="T&N Homemade Kitchen catering spread"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
+            </div>
             <div>
+              <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
+                Full-Service Catering
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">
+                From 10 to 500 Guests
+              </h2>
+              <p className="text-cream/60 text-lg leading-relaxed mb-6">
+                Whether it&apos;s an intimate dinner party or a 500-person corporate event,
+                T&N Homemade Kitchen brings the homemade difference to every catering order.
+                Pick-up, drop-off, or full service with tables, chairs, linens, and staff.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/catering"
+                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
+                >
+                  View Catering Menu
+                </Link>
+                <a
+                  href="tel:2677670073"
+                  className="border border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+                >
+                  Call Michael
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* Food Truck CTA */}
+      <section className="py-24 md:py-32 bg-dark-light">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
               <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
                 The Jeet? Mobile
               </p>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">
                 Bring T&N to Your Event
               </h2>
-              <p className="text-cream/70 text-lg leading-relaxed mb-6">
+              <p className="text-cream/60 text-lg leading-relaxed mb-6">
                 Our food truck, the &ldquo;Jeet? Mobile,&rdquo; brings the full T&N Homemade Kitchen
                 experience right to your doorstep. Perfect for weddings, corporate events, festivals,
                 block parties, and private celebrations.
@@ -200,30 +283,35 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/food-truck"
-                  className="bg-gold hover:bg-gold-light text-white px-8 py-3 rounded-full font-semibold transition-colors"
+                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
                 >
                   Book the Food Truck
                 </Link>
                 <a
                   href="tel:2677670073"
-                  className="border border-cream/30 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+                  className="border border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
                 >
                   Call Michael
                 </a>
               </div>
             </div>
-            <div className="w-full h-64 md:h-80 rounded-2xl bg-gradient-to-br from-red-800/30 to-gold/20 flex items-center justify-center">
-              <div className="text-center">
-                <span className="text-6xl block mb-3">🚚</span>
-                <span className="text-cream/50 text-sm">Jeet? Mobile Food Truck</span>
-              </div>
+            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden h-80 md:h-[450px]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=800&q=80"
+                alt="T&N Homemade Kitchen Jeet? Mobile food truck"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Testimonials */}
-      <section className="py-16 md:py-24 bg-cream">
+      <section className="py-24 md:py-32 bg-dark">
         <div className="max-w-7xl mx-auto px-4">
           <SectionHeading
             title="What Our Customers Say"
@@ -249,7 +337,7 @@ export default function Home() {
             ].map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="bg-white p-6 rounded-2xl shadow-sm border border-cream-dark"
+                className="bg-dark-card p-6 rounded-2xl border border-dark-border"
               >
                 <div className="flex gap-1 text-gold mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -258,12 +346,12 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-charcoal-light/80 text-sm leading-relaxed mb-4 italic">
+                <p className="text-cream/70 text-sm leading-relaxed mb-4 italic">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
                 <div>
-                  <p className="font-semibold text-charcoal text-sm">{testimonial.name}</p>
-                  <p className="text-xs text-charcoal-light/50">{testimonial.location}</p>
+                  <p className="font-semibold text-cream text-sm">{testimonial.name}</p>
+                  <p className="text-xs text-cream/40">{testimonial.location}</p>
                 </div>
               </div>
             ))}
@@ -271,20 +359,24 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Quick Contact / CTA */}
-      <section className="py-16 md:py-24 bg-red-900 text-cream">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-red-800 to-red-900" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.1),transparent_70%)]" />
+        <div className="relative max-w-4xl mx-auto px-4 text-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">
             Ready to Place Your Order?
           </h2>
-          <p className="text-cream/70 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-cream/60 text-lg mb-8 max-w-xl mx-auto">
             Whether it&apos;s a sandwich for one or catering for 500, we&apos;re here to feed you right.
             Call us or order online today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:2154621095"
-              className="bg-white text-red-900 hover:bg-cream px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-cream text-dark hover:bg-cream-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
             >
               Call 215-462-1095
             </a>
@@ -292,13 +384,13 @@ export default function Home() {
               href="https://slicelife.com/restaurants/pa/philadelphia/19145/t-n-homemade-kitchen/menu"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gold hover:bg-gold-light text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
             >
               Order Online
             </a>
             <Link
               href="/contact"
-              className="border-2 border-cream/30 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
             >
               Contact Us
             </Link>

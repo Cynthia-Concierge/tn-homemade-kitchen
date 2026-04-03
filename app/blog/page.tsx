@@ -46,17 +46,20 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-cream py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Blog</h1>
-          <p className="text-cream/70 text-lg max-w-xl mx-auto">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
+        <div className="relative max-w-7xl mx-auto px-4 text-center">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Blog</h1>
+          <p className="text-cream/60 text-lg max-w-xl mx-auto">
             Food stories, catering tips, and South Philly culture from the T&N kitchen.
           </p>
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* Posts */}
-      <section className="py-16 md:py-24 bg-cream">
+      <section className="py-24 md:py-32 bg-dark-light">
         <div className="max-w-4xl mx-auto px-4">
           <SectionHeading
             title="Latest Posts"
@@ -66,27 +69,27 @@ export default function BlogPage() {
             {posts.map((post) => (
               <article
                 key={post.slug}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-cream-dark hover:shadow-md transition-shadow"
+                className="bg-dark-card rounded-2xl overflow-hidden border border-dark-border hover:border-gold/30 transition-colors"
               >
                 <div className="p-6 md:p-8">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs font-semibold text-gold bg-gold/10 px-3 py-1 rounded-full">
                       {post.category}
                     </span>
-                    <span className="text-xs text-charcoal-light/50">{post.date}</span>
-                    <span className="text-xs text-charcoal-light/50">{post.readTime}</span>
+                    <span className="text-xs text-cream/30">{post.date}</span>
+                    <span className="text-xs text-cream/30">{post.readTime}</span>
                   </div>
                   <Link href={`/blog/${post.slug}`}>
-                    <h2 className="font-serif text-xl md:text-2xl font-bold text-charcoal mb-3 hover:text-red-800 transition-colors">
+                    <h2 className="font-serif text-xl md:text-2xl font-bold text-cream mb-3 hover:text-gold transition-colors">
                       {post.title}
                     </h2>
                   </Link>
-                  <p className="text-charcoal-light/70 leading-relaxed mb-4">
+                  <p className="text-cream/50 leading-relaxed mb-4">
                     {post.excerpt}
                   </p>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-red-800 hover:text-red-900 font-semibold text-sm transition-colors"
+                    className="inline-flex items-center gap-2 text-gold hover:text-gold-light font-semibold text-sm transition-colors"
                   >
                     Read More
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

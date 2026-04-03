@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const navLinks = [
@@ -17,17 +17,36 @@ const navLinks = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-red-900 shadow-lg">
-      {/* Top bar */}
-      <div className="bg-charcoal text-cream text-xs py-1.5 px-4 hidden md:flex justify-between items-center">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-dark/95 backdrop-blur-md shadow-lg shadow-black/20"
+          : "bg-transparent"
+      }`}
+    >
+      {/* Top bar - only visible when scrolled */}
+      <div
+        className={`bg-dark-light text-cream/60 text-xs py-1.5 px-4 hidden md:flex justify-between items-center border-b border-dark-border transition-all duration-300 ${
+          scrolled ? "max-h-0 overflow-hidden py-0 border-0" : "max-h-10"
+        }`}
+      >
         <span>1820 W. Moyamensing Ave, Philadelphia, PA 19145</span>
         <div className="flex gap-4 items-center">
           <a href="tel:2154621095" className="hover:text-gold transition-colors">
             215-462-1095
           </a>
-          <span className="text-cream/40">|</span>
+          <span className="text-cream/20">|</span>
           <span>Mon-Fri 6:30am-2pm &bull; Sat-Sun 8am-2pm</span>
         </div>
       </div>
@@ -59,14 +78,14 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-cream/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-white/5"
+              className="text-cream/80 hover:text-gold px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-white/5"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="/catering"
-            className="ml-3 bg-gold hover:bg-gold-light text-white px-5 py-2 rounded-full text-sm font-semibold transition-colors"
+            className="ml-3 bg-gold hover:bg-gold-light text-dark px-5 py-2 rounded-full text-sm font-semibold transition-colors"
           >
             Order Catering
           </Link>
@@ -92,13 +111,13 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-red-900 border-t border-white/10 pb-4">
+        <div className="lg:hidden bg-dark/95 backdrop-blur-md border-t border-dark-border pb-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block text-cream/90 hover:text-gold hover:bg-white/5 px-6 py-3 text-base font-medium transition-colors"
+              className="block text-cream/80 hover:text-gold hover:bg-white/5 px-6 py-3 text-base font-medium transition-colors"
             >
               {link.label}
             </Link>
@@ -107,13 +126,13 @@ export default function Header() {
             <Link
               href="/catering"
               onClick={() => setMobileOpen(false)}
-              className="bg-gold hover:bg-gold-light text-white px-5 py-3 rounded-full text-center text-sm font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-5 py-3 rounded-full text-center text-sm font-semibold transition-colors"
             >
               Order Catering
             </Link>
             <a
               href="tel:2154621095"
-              className="border border-cream/30 text-cream px-5 py-3 rounded-full text-center text-sm font-semibold hover:bg-white/5 transition-colors"
+              className="border border-cream/20 text-cream px-5 py-3 rounded-full text-center text-sm font-semibold hover:bg-white/5 transition-colors"
             >
               Call 215-462-1095
             </a>

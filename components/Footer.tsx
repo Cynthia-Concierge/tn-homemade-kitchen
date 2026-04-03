@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-cream/80">
+    <footer className="bg-dark-light border-t border-dark-border">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Brand */}
@@ -11,7 +11,7 @@ export default function Footer() {
           <p className="text-gold text-sm tracking-widest uppercase mb-4">
             Breakfast &bull; Lunch &bull; Catering
           </p>
-          <p className="text-sm leading-relaxed">
+          <p className="text-sm leading-relaxed text-cream/60">
             Family-owned South Philly deli and catering service since 1980. Everything made
             in-house with fresh, local ingredients.
           </p>
@@ -33,7 +33,7 @@ export default function Footer() {
         {/* Quick Links */}
         <div>
           <h4 className="font-serif text-lg font-semibold text-cream mb-4">Quick Links</h4>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-sm text-cream/60">
             <li><Link href="/menu" className="hover:text-gold transition-colors">Menu</Link></li>
             <li><Link href="/catering" className="hover:text-gold transition-colors">Catering</Link></li>
             <li><Link href="/corporate-catering" className="hover:text-gold transition-colors">Corporate Catering</Link></li>
@@ -48,7 +48,7 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h4 className="font-serif text-lg font-semibold text-cream mb-4">Contact Us</h4>
-          <ul className="space-y-3 text-sm">
+          <ul className="space-y-3 text-sm text-cream/60">
             <li className="flex gap-2">
               <svg className="w-4 h-4 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -63,7 +63,7 @@ export default function Footer() {
               <div>
                 <a href="tel:2154621095" className="hover:text-gold transition-colors block">215-462-1095 (Restaurant)</a>
                 <a href="tel:2677670073" className="hover:text-gold transition-colors block">267-767-0073 (Catering)</a>
-                <span className="text-cream/50">215-462-7090 (Fax)</span>
+                <span className="text-cream/30">215-462-7090 (Fax)</span>
               </div>
             </li>
             <li className="flex gap-2">
@@ -80,7 +80,7 @@ export default function Footer() {
         {/* Hours & Order */}
         <div>
           <h4 className="font-serif text-lg font-semibold text-cream mb-4">Hours</h4>
-          <div className="text-sm space-y-1 mb-6">
+          <div className="text-sm space-y-1 mb-6 text-cream/60">
             <div className="flex justify-between">
               <span>Mon - Fri</span>
               <span className="text-gold">6:30am - 2:00pm</span>
@@ -95,7 +95,7 @@ export default function Footer() {
               href="https://slicelife.com/restaurants/pa/philadelphia/19145/t-n-homemade-kitchen/menu"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-gold hover:bg-gold-light text-white text-center px-4 py-2.5 rounded-full text-sm font-semibold transition-colors"
+              className="block bg-gold hover:bg-gold-light text-dark text-center px-4 py-2.5 rounded-full text-sm font-semibold transition-colors"
             >
               Order Online (Slice)
             </a>
@@ -103,7 +103,7 @@ export default function Footer() {
               href="https://www.ezcater.com/brand/pvt/t-and-n-homemade-kitchen"
               target="_blank"
               rel="noopener noreferrer"
-              className="block border border-gold/50 hover:border-gold text-gold text-center px-4 py-2.5 rounded-full text-sm font-semibold transition-colors"
+              className="block border border-gold/40 hover:border-gold text-gold text-center px-4 py-2.5 rounded-full text-sm font-semibold transition-colors"
             >
               Order on ezCater
             </a>
@@ -112,7 +112,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10 py-4 px-4 text-center text-xs text-cream/40">
+      <div className="border-t border-dark-border py-4 px-4 text-center text-xs text-cream/30">
         <p>&copy; {new Date().getFullYear()} T&N Homemade Kitchen. All rights reserved. Family owned since 1980.</p>
       </div>
     </footer>
