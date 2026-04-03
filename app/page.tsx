@@ -77,8 +77,8 @@ export default function Home() {
         <div className="absolute inset-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/michelin-star-plated-dish-fine-dining-elegant-food.jpg"
-            alt="Signature dish from T&N Homemade Kitchen"
+            src="/hero-ingredients.jpg"
+            alt="Fresh Italian ingredients - pasta, tomatoes, garlic, basil, olives on rustic wood"
             className="w-full h-full object-cover"
           />
           {/* Dark overlays for text readability */}
