@@ -71,66 +71,62 @@ export default function Home() {
   return (
     <>
 
-      {/* Hero - Full Screen Ember & Oak Style */}
-      <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-dark">
-        {/* Background gradient overlays for smoky feel */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/80 to-dark" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.08),transparent_70%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.15),transparent_60%)]" />
+      {/* Hero - Full Screen Image (Ember & Oak Style) */}
+      <section className="relative h-screen overflow-hidden">
+        {/* Full-screen background image */}
+        <div className="absolute inset-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/michelin-star-plated-dish-fine-dining-elegant-food.jpg"
+            alt="Signature dish from T&N Homemade Kitchen"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlays for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/40 to-dark/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
+        </div>
 
-        {/* Hero food image with glow */}
-        <div className="relative z-10 flex flex-col items-center">
-          {/* Orange glow behind image */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] bg-orange-600/20 rounded-full blur-3xl" />
-
-          {/* Restaurant name overlaid */}
-          <h1
-            className="relative z-20 font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-cream text-center mb-4 leading-tight"
-            style={{ textShadow: "0 4px 30px rgba(0,0,0,0.7), 0 2px 10px rgba(0,0,0,0.5)" }}
-          >
-            T&N Homemade<br />Kitchen
-          </h1>
-
-          {/* Food hero image */}
-          <div className="relative z-10 w-80 h-80 md:w-[480px] md:h-[480px] rounded-full overflow-hidden shadow-2xl shadow-black/50 border-2 border-gold/20 -mt-8">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1920&q=80"
-              alt="Delicious Italian food from T&N Homemade Kitchen"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Tagline */}
-          <p className="relative z-20 text-gold tracking-[0.3em] uppercase text-sm md:text-base font-medium mt-8">
-            Breakfast. Lunch. Catering.
-          </p>
-          <p className="relative z-20 text-cream/50 text-sm mt-2 tracking-wider">
-            Est. 1980 &bull; South Philadelphia
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="relative z-20 flex flex-wrap justify-center gap-4 mt-8">
-            <Link
-              href="/catering"
-              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 text-lg font-semibold transition-colors shadow-lg shadow-gold/20"
+        {/* Centered text overlay */}
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="text-center px-4">
+            <h1
+              className="font-serif text-6xl md:text-8xl lg:text-9xl text-cream tracking-wider"
+              style={{ textShadow: "0 4px 20px rgba(0,0,0,0.8), 0 0 40px rgba(212,165,116,0.3)" }}
             >
-              Order Catering
-            </Link>
-            <Link
-              href="/food-truck"
-              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
+              T&N
+            </h1>
+            <h2
+              className="font-serif text-3xl md:text-5xl lg:text-6xl text-cream tracking-wide mt-2"
+              style={{ textShadow: "0 4px 20px rgba(0,0,0,0.8)" }}
             >
-              Book Food Truck
-            </Link>
+              Homemade Kitchen
+            </h2>
+            <p className="text-gold tracking-[0.3em] uppercase text-sm md:text-lg mt-6 drop-shadow-lg bg-black/30 px-6 py-2 inline-block backdrop-blur-sm">
+              Breakfast &middot; Lunch &middot; Catering
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap justify-center gap-4 mt-10">
+              <Link
+                href="/catering"
+                className="bg-gold hover:bg-gold-light text-dark px-10 py-4 text-lg font-medium tracking-wider uppercase transition-colors shadow-2xl"
+              >
+                Order Catering
+              </Link>
+              <Link
+                href="/food-truck"
+                className="border-2 border-cream/30 hover:border-gold text-cream hover:text-gold px-10 py-4 text-lg font-medium tracking-wider uppercase transition-all backdrop-blur-sm"
+              >
+                Book Food Truck
+              </Link>
+            </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
-          <span className="text-cream/30 text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-6 h-10 rounded-full border-2 border-cream/20 flex items-start justify-center p-1.5">
-            <div className="w-1.5 h-1.5 rounded-full bg-gold animate-bounce-dot" />
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
+          <div className="w-6 h-10 border-2 border-gold rounded-full flex justify-center shadow-lg">
+            <div className="w-1.5 h-1.5 bg-gold rounded-full mt-2 shadow-lg animate-bounce-dot" />
           </div>
         </div>
       </section>
