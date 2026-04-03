@@ -70,14 +70,6 @@ const whyChooseUs = [
 export default function Home() {
   return (
     <>
-      {/* Renovation Banner */}
-      <div className="relative z-50 bg-gold/90 text-dark text-center py-3 px-4 text-sm font-medium">
-        <span className="font-semibold">Renovation Update:</span> Our retail location is currently closed for renovations.
-        We are <span className="font-semibold underline">fully open</span> for all catering orders, trays, and food truck events!{" "}
-        <a href="tel:2677670073" className="underline font-semibold hover:text-red-900 transition-colors">
-          Call Michael: 267-767-0073
-        </a>
-      </div>
 
       {/* Hero - Full Screen Ember & Oak Style */}
       <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-dark">
