@@ -103,7 +103,7 @@ export default function GalleryPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/catering"
+              href="/contact"
               className="bg-gold hover:bg-gold-light text-dark px-8 py-3 font-semibold transition-colors"
             >
               Order Catering

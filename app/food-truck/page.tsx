@@ -73,7 +73,7 @@ export default function FoodTruckPage() {
                   Book the Truck: 267-767-0073
                 </a>
                 <a
-                  href="mailto:michael@tnhomemadekitchen.com?subject=Food%20Truck%20Booking%20Inquiry"
+                  href="/contact"
                   className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Email Michael

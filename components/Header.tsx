@@ -97,7 +97,7 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="/catering"
+            href="/contact"
             className="ml-3 bg-gold hover:bg-gold-light text-dark px-5 py-2 text-sm font-semibold transition-colors"
           >
             Order Catering
@@ -137,7 +137,7 @@ export default function Header() {
           ))}
           <div className="px-6 pt-3 flex flex-col gap-2">
             <Link
-              href="/catering"
+              href="/contact"
               onClick={() => setMobileOpen(false)}
               className="bg-gold hover:bg-gold-light text-dark px-5 py-3 text-center text-sm font-semibold transition-colors"
             >

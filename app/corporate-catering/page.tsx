@@ -210,7 +210,7 @@ export default function CorporateCateringPage() {
               Call Michael: 267-767-0073
             </a>
             <a
-              href="mailto:michael@tnhomemadekitchen.com?subject=Corporate%20Catering%20Quote"
+              href="/contact"
               className="bg-cream text-dark hover:bg-cream-dark px-8 py-4 text-lg font-semibold transition-colors"
             >
               Email for a Quote

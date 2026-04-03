@@ -13,7 +13,7 @@ export default function MobileCTA() {
         Call Now
       </a>
       <a
-        href="/catering"
+        href="/contact"
         className="flex-1 flex items-center justify-center gap-2 bg-gold text-dark py-2.5 rounded-full text-sm font-semibold"
       >
         Order Catering
