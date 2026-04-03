@@ -17,6 +17,9 @@
   --color-gold-dark: #b8905e;
   --color-charcoal: #1A1A1A;
   --color-charcoal-light: #333333;
+  --color-light: #ffffff;
+  --color-light-card: #f9f7f5;
+  --color-light-border: #e5e0db;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: var(--font-geist-sans), 'Geist', system-ui, -apple-system, sans-serif;
   --radius-sm: 0;
@@ -35,8 +38,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--color-cream);
-  background: var(--color-dark);
+  color: var(--color-charcoal);
+  background: var(--color-light);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Gradient divider between sections */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(26, 22, 20, 0.1), transparent);
 }
 
 /* Scroll indicator animation */

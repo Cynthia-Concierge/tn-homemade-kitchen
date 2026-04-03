@@ -135,7 +135,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Featured Menu Items */}
-      <section className="py-24 md:py-32 bg-dark">
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <SectionHeading
             title="Fan Favorites"
@@ -145,7 +145,7 @@ export default function Home() {
             {featuredItems.map((item) => (
               <div
                 key={item.name}
-                className="bg-dark-card overflow-hidden border border-dark-border hover:border-gold/30 transition-all group"
+                className="bg-white overflow-hidden border border-light-border hover:border-gold/30 transition-all group"
               >
                 <div className="w-full h-48 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -157,12 +157,12 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-start justify-between gap-2 mb-2">
-                    <h3 className="font-serif text-lg font-bold text-cream">{item.name}</h3>
+                    <h3 className="font-serif text-lg font-bold text-charcoal">{item.name}</h3>
                     {item.price && (
                       <span className="text-gold font-bold text-lg whitespace-nowrap">{item.price}</span>
                     )}
                   </div>
-                  <p className="text-sm text-cream/50 leading-relaxed">{item.description}</p>
+                  <p className="text-sm text-charcoal/60 leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -184,7 +184,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Why Choose Us */}
-      <section className="py-24 md:py-32 bg-dark-light">
+      <section className="py-24 md:py-32 bg-light-card">
         <div className="max-w-7xl mx-auto px-4">
           <SectionHeading
             title="Why Choose T&N?"
@@ -196,8 +196,8 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gold/10 text-gold flex items-center justify-center mx-auto mb-4">
                   {item.icon}
                 </div>
-                <h3 className="font-serif text-xl font-bold mb-2 text-cream">{item.title}</h3>
-                <p className="text-cream/50 text-sm leading-relaxed">{item.description}</p>
+                <h3 className="font-serif text-xl font-bold mb-2 text-charcoal">{item.title}</h3>
+                <p className="text-charcoal/60 text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -207,7 +207,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Catering Showcase */}
-      <section className="py-24 md:py-32 bg-dark">
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative overflow-hidden h-80 md:h-[500px]">
@@ -217,16 +217,15 @@ export default function Home() {
                 alt="T&N Homemade Kitchen catering spread"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
             </div>
             <div>
               <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
                 Full-Service Catering
               </p>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-charcoal">
                 From 10 to 500 Guests
               </h2>
-              <p className="text-cream/60 text-lg leading-relaxed mb-6">
+              <p className="text-charcoal/60 text-lg leading-relaxed mb-6">
                 Whether it&apos;s an intimate dinner party or a 500-person corporate event,
                 T&N Homemade Kitchen brings the homemade difference to every catering order.
                 Pick-up, drop-off, or full service with tables, chairs, linens, and staff.
@@ -240,7 +239,7 @@ export default function Home() {
                 </Link>
                 <a
                   href="tel:2677670073"
-                  className="border border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
+                  className="border border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Call Michael
                 </a>
@@ -253,17 +252,17 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Food Truck CTA */}
-      <section className="py-24 md:py-32 bg-dark-light">
+      <section className="py-24 md:py-32 bg-light-card">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
                 The Jeet? Mobile
               </p>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-charcoal">
                 Bring T&N to Your Event
               </h2>
-              <p className="text-cream/60 text-lg leading-relaxed mb-6">
+              <p className="text-charcoal/60 text-lg leading-relaxed mb-6">
                 Our food truck, the &ldquo;Jeet? Mobile,&rdquo; brings the full T&N Homemade Kitchen
                 experience right to your doorstep. Perfect for weddings, corporate events, festivals,
                 block parties, and private celebrations.
@@ -277,7 +276,7 @@ export default function Home() {
                 </Link>
                 <a
                   href="tel:2677670073"
-                  className="border border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
+                  className="border border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Call Michael
                 </a>
@@ -286,11 +285,10 @@ export default function Home() {
             <div className="order-1 lg:order-2 relative overflow-hidden h-80 md:h-[450px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=800&q=80"
+                src="/jeet-mobile.png"
                 alt="T&N Homemade Kitchen Jeet? Mobile food truck"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
             </div>
           </div>
         </div>
@@ -299,7 +297,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Testimonials */}
-      <section className="py-24 md:py-32 bg-dark">
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <SectionHeading
             title="What Our Customers Say"
@@ -325,7 +323,7 @@ export default function Home() {
             ].map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="bg-dark-card p-6 border border-dark-border"
+                className="bg-light-card p-6 border border-light-border"
               >
                 <div className="flex gap-1 text-gold mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -334,12 +332,12 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-cream/70 text-sm leading-relaxed mb-4 italic">
+                <p className="text-charcoal/70 text-sm leading-relaxed mb-4 italic">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
                 <div>
-                  <p className="font-semibold text-cream text-sm">{testimonial.name}</p>
-                  <p className="text-xs text-cream/40">{testimonial.location}</p>
+                  <p className="font-semibold text-charcoal text-sm">{testimonial.name}</p>
+                  <p className="text-xs text-charcoal/40">{testimonial.location}</p>
                 </div>
               </div>
             ))}

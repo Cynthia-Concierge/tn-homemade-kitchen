@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -18,6 +19,8 @@ const navLinks = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,26 +30,32 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // On homepage before scroll: transparent with light text (over dark hero)
+  // On homepage after scroll OR on other pages: white bg with dark text
+  const showTransparent = isHome && !scrolled;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-dark/95 backdrop-blur-md shadow-lg shadow-black/20"
-          : "bg-transparent"
+        showTransparent
+          ? "bg-transparent"
+          : "bg-white/95 backdrop-blur-md shadow-md"
       }`}
     >
-      {/* Top bar - only visible when scrolled */}
+      {/* Top bar - only visible when not scrolled on homepage */}
       <div
-        className={`bg-dark-light text-cream/60 text-xs py-1.5 px-4 hidden md:flex justify-between items-center border-b border-dark-border transition-all duration-300 ${
-          scrolled ? "max-h-0 overflow-hidden py-0 border-0" : "max-h-10"
-        }`}
+        className={`text-xs py-1.5 px-4 hidden md:flex justify-between items-center border-b transition-all duration-300 ${
+          showTransparent
+            ? "bg-dark-light text-cream/60 border-dark-border"
+            : "bg-light-card text-charcoal/50 border-light-border"
+        } ${scrolled ? "max-h-0 overflow-hidden py-0 border-0" : "max-h-10"}`}
       >
         <span>1820 W. Moyamensing Ave, Philadelphia, PA 19145</span>
         <div className="flex gap-4 items-center">
           <a href="tel:2154621095" className="hover:text-gold transition-colors">
             215-462-1095
           </a>
-          <span className="text-cream/20">|</span>
+          <span className={showTransparent ? "text-cream/20" : "text-charcoal/20"}>|</span>
           <span>Mon-Fri 6:30am-2pm &bull; Sat-Sun 8am-2pm</span>
         </div>
       </div>
@@ -63,7 +72,7 @@ export default function Header() {
             height={48}
           />
           <div className="hidden sm:block">
-            <div className="text-cream font-serif font-bold text-lg leading-tight">
+            <div className={`font-serif font-bold text-lg leading-tight ${showTransparent ? "text-cream" : "text-charcoal"}`}>
               T&N Homemade Kitchen
             </div>
             <div className="text-gold text-xs tracking-widest uppercase">
@@ -78,7 +87,11 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-cream/80 hover:text-gold px-3 py-2 text-sm font-medium transition-colors hover:bg-white/5"
+              className={`px-3 py-2 text-sm font-medium transition-colors ${
+                showTransparent
+                  ? "text-cream/80 hover:text-gold hover:bg-white/5"
+                  : "text-charcoal/70 hover:text-gold hover:bg-charcoal/5"
+              }`}
             >
               {link.label}
             </Link>
@@ -94,7 +107,7 @@ export default function Header() {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden text-cream p-2"
+          className={`lg:hidden p-2 ${showTransparent ? "text-cream" : "text-charcoal"}`}
           aria-label="Toggle mobile menu"
         >
           {mobileOpen ? (
@@ -111,13 +124,13 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-dark/95 backdrop-blur-md border-t border-dark-border pb-4">
+        <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-light-border pb-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block text-cream/80 hover:text-gold hover:bg-white/5 px-6 py-3 text-base font-medium transition-colors"
+              className="block text-charcoal/70 hover:text-gold hover:bg-charcoal/5 px-6 py-3 text-base font-medium transition-colors"
             >
               {link.label}
             </Link>
@@ -132,7 +145,7 @@ export default function Header() {
             </Link>
             <a
               href="tel:2154621095"
-              className="border border-cream/20 text-cream px-5 py-3 text-center text-sm font-semibold hover:bg-white/5 transition-colors"
+              className="border border-light-border text-charcoal px-5 py-3 text-center text-sm font-semibold hover:bg-light-card transition-colors"
             >
               Call 215-462-1095
             </a>

@@ -15,11 +15,11 @@ export default function ReservationsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Reservations</h1>
-          <p className="text-cream/60 text-lg max-w-xl mx-auto">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-charcoal">Reservations</h1>
+          <p className="text-charcoal/60 text-lg max-w-xl mx-auto">
             Reserve your table at T&N Homemade Kitchen. Walk-ins are always welcome, but reservations
             help us save you the perfect spot.
           </p>
@@ -28,7 +28,7 @@ export default function ReservationsPage() {
 
       {/* Notice */}
       <div className="bg-gold/10 border-y border-gold/20 py-4 px-4 text-center">
-        <p className="text-sm text-cream/70 max-w-2xl mx-auto">
+        <p className="text-sm text-charcoal/70 max-w-2xl mx-auto">
           <span className="font-semibold text-gold">Important:</span> Our retail location is currently undergoing renovations.
           Reservations will resume once renovations are complete. In the meantime, we are fully open for{" "}
           <a href="/catering" className="text-gold underline hover:text-gold-light font-semibold">catering orders</a>,{" "}
@@ -40,58 +40,58 @@ export default function ReservationsPage() {
       <div className="section-divider" />
 
       {/* Reservation Form */}
-      <section className="py-24 md:py-32 bg-dark-light">
+      <section className="py-24 md:py-32 bg-light-card">
         <div className="max-w-3xl mx-auto px-4">
           <SectionHeading
             title="Reserve Your Table"
             subtitle="Choose booth or counter seating and let us know when you're coming."
           />
 
-          <form className="bg-dark-card p-6 md:p-8 border border-dark-border space-y-6">
+          <form className="bg-white p-6 md:p-8 border border-light-border space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="r-name" className="block text-sm font-semibold text-cream mb-1.5">
+                <label htmlFor="r-name" className="block text-sm font-semibold text-charcoal mb-1.5">
                   Name *
                 </label>
                 <input
                   id="r-name"
                   type="text"
                   required
-                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                  className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal placeholder:text-charcoal/30"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label htmlFor="r-phone" className="block text-sm font-semibold text-cream mb-1.5">
+                <label htmlFor="r-phone" className="block text-sm font-semibold text-charcoal mb-1.5">
                   Phone *
                 </label>
                 <input
                   id="r-phone"
                   type="tel"
                   required
-                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                  className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal placeholder:text-charcoal/30"
                   placeholder="(215) 555-0123"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-cream mb-3">
+              <label className="block text-sm font-semibold text-charcoal mb-3">
                 Seating Preference *
               </label>
               <div className="grid grid-cols-2 gap-4">
                 <label className="relative cursor-pointer">
                   <input type="radio" name="seating" value="booth" className="peer sr-only" defaultChecked />
-                  <div className="p-4 border-2 border-dark-border peer-checked:border-gold peer-checked:bg-gold/5 text-center transition-all">
+                  <div className="p-4 border-2 border-light-border peer-checked:border-gold peer-checked:bg-gold/5 text-center transition-all">
                     <span className="text-2xl block mb-1">🪑</span>
-                    <span className="font-semibold text-cream">Booth</span>
+                    <span className="font-semibold text-charcoal">Booth</span>
                   </div>
                 </label>
                 <label className="relative cursor-pointer">
                   <input type="radio" name="seating" value="counter" className="peer sr-only" />
-                  <div className="p-4 border-2 border-dark-border peer-checked:border-gold peer-checked:bg-gold/5 text-center transition-all">
+                  <div className="p-4 border-2 border-light-border peer-checked:border-gold peer-checked:bg-gold/5 text-center transition-all">
                     <span className="text-2xl block mb-1">🍽</span>
-                    <span className="font-semibold text-cream">Counter</span>
+                    <span className="font-semibold text-charcoal">Counter</span>
                   </div>
                 </label>
               </div>
@@ -99,13 +99,13 @@ export default function ReservationsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <label htmlFor="r-guests" className="block text-sm font-semibold text-cream mb-1.5">
+                <label htmlFor="r-guests" className="block text-sm font-semibold text-charcoal mb-1.5">
                   Number of People *
                 </label>
                 <select
                   id="r-guests"
                   required
-                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                  className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal"
                 >
                   <option value="">Select</option>
                   {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
@@ -115,24 +115,24 @@ export default function ReservationsPage() {
                 </select>
               </div>
               <div>
-                <label htmlFor="r-date" className="block text-sm font-semibold text-cream mb-1.5">
+                <label htmlFor="r-date" className="block text-sm font-semibold text-charcoal mb-1.5">
                   Date *
                 </label>
                 <input
                   id="r-date"
                   type="date"
                   required
-                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                  className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal"
                 />
               </div>
               <div>
-                <label htmlFor="r-time" className="block text-sm font-semibold text-cream mb-1.5">
+                <label htmlFor="r-time" className="block text-sm font-semibold text-charcoal mb-1.5">
                   Time *
                 </label>
                 <select
                   id="r-time"
                   required
-                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                  className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal"
                 >
                   <option value="">Select</option>
                   <option>6:30 AM</option>
@@ -155,13 +155,13 @@ export default function ReservationsPage() {
             </div>
 
             <div>
-              <label htmlFor="r-message" className="block text-sm font-semibold text-cream mb-1.5">
+              <label htmlFor="r-message" className="block text-sm font-semibold text-charcoal mb-1.5">
                 Special Requests
               </label>
               <textarea
                 id="r-message"
                 rows={3}
-                className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream resize-y placeholder:text-cream/30"
+                className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal resize-y placeholder:text-charcoal/30"
                 placeholder="Any special requests or notes..."
               />
             </div>
@@ -173,9 +173,9 @@ export default function ReservationsPage() {
               Request Reservation
             </button>
 
-            <div className="bg-dark p-4 text-center border border-dark-border">
-              <p className="text-xs text-cream/40">
-                <span className="font-semibold text-cream/60">Please Note:</span> Please arrive promptly at your reserved time.
+            <div className="bg-light-card p-4 text-center border border-light-border">
+              <p className="text-xs text-charcoal/40">
+                <span className="font-semibold text-charcoal/60">Please Note:</span> Please arrive promptly at your reserved time.
                 We reserve the right to seat other guests during busy hours if you are more than 10 minutes late.
                 For parties of 9 or more, please call us directly at{" "}
                 <a href="tel:2154621095" className="text-gold hover:underline font-semibold">215-462-1095</a>.

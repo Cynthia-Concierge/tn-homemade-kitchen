@@ -48,7 +48,7 @@ export default function FoodTruckPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,165,116,0.1),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -56,11 +56,11 @@ export default function FoodTruckPage() {
               <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
                 The Jeet? Mobile
               </p>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-charcoal">
                 South Philly&apos;s Favorite<br />
                 <span className="text-gold">Food Truck</span>
               </h1>
-              <p className="text-cream/60 text-lg mb-8 leading-relaxed">
+              <p className="text-charcoal/60 text-lg mb-8 leading-relaxed">
                 &ldquo;Jeet?&rdquo; — It&apos;s how we say &ldquo;Did you eat?&rdquo; in South Philly.
                 Our food truck brings the full T&N Homemade Kitchen experience to your event, wherever
                 you are. Same fresh, homemade food. Same family recipes. Just on wheels.
@@ -74,7 +74,7 @@ export default function FoodTruckPage() {
                 </a>
                 <a
                   href="mailto:michael@tnhomemadekitchen.com?subject=Food%20Truck%20Booking%20Inquiry"
-                  className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
+                  className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Email Michael
                 </a>
@@ -83,13 +83,13 @@ export default function FoodTruckPage() {
             <div className="relative overflow-hidden h-64 md:h-96 shadow-2xl shadow-black/40">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=800&q=80"
+                src="/jeet-mobile.png"
                 alt="Jeet? Mobile food truck from T&N Homemade Kitchen"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-center">
-                <span className="text-cream/70 text-lg font-serif italic">Jeet? Mobile</span>
+                <span className="text-charcoal/70 text-lg font-serif italic">Jeet? Mobile</span>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function FoodTruckPage() {
       <div className="section-divider" />
 
       {/* Event Types */}
-      <section className="py-24 md:py-32 bg-dark-light">
+      <section className="py-24 md:py-32 bg-light-card">
         <div className="max-w-6xl mx-auto px-4">
           <SectionHeading
             title="Perfect for Every Event"
@@ -109,11 +109,11 @@ export default function FoodTruckPage() {
             {eventTypes.map((event) => (
               <div
                 key={event.title}
-                className="bg-dark-card p-6 border border-dark-border hover:border-gold/30 transition-colors"
+                className="bg-white p-6 border border-light-border hover:border-gold/30 transition-colors"
               >
                 <span className="text-3xl block mb-3">{event.icon}</span>
-                <h3 className="font-serif text-lg font-bold mb-2 text-cream">{event.title}</h3>
-                <p className="text-sm text-cream/50 leading-relaxed">{event.description}</p>
+                <h3 className="font-serif text-lg font-bold mb-2 text-charcoal">{event.title}</h3>
+                <p className="text-sm text-charcoal/60 leading-relaxed">{event.description}</p>
               </div>
             ))}
           </div>
@@ -123,7 +123,7 @@ export default function FoodTruckPage() {
       <div className="section-divider" />
 
       {/* Photo Gallery */}
-      <section className="py-24 md:py-32 bg-dark">
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <SectionHeading
             title="The Jeet? Mobile in Action"
@@ -131,7 +131,7 @@ export default function FoodTruckPage() {
           />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { src: "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=600&q=80", alt: "Food truck event" },
+              { src: "/jeet-mobile.png", alt: "Food truck event" },
               { src: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600&q=80", alt: "Fresh sandwiches" },
               { src: "https://images.unsplash.com/photo-1530062845289-9109b2c9c868?w=600&q=80", alt: "Event catering" },
               { src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80", alt: "Food platter" },
@@ -140,7 +140,7 @@ export default function FoodTruckPage() {
             ].map((photo, i) => (
               <div
                 key={i}
-                className="aspect-square overflow-hidden border border-dark-border"
+                className="aspect-square overflow-hidden border border-light-border"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -157,34 +157,34 @@ export default function FoodTruckPage() {
       <div className="section-divider" />
 
       {/* Booking Form */}
-      <section className="py-24 md:py-32 bg-dark-light" id="book">
+      <section className="py-24 md:py-32 bg-light-card" id="book">
         <div className="max-w-3xl mx-auto px-4">
           <SectionHeading
             title="Book the Jeet? Mobile"
             subtitle="Fill out the form below and Michael will get back to you within 24 hours."
           />
-          <form className="bg-dark-card p-6 md:p-8 border border-dark-border space-y-6">
+          <form className="bg-white p-6 md:p-8 border border-light-border space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="ft-name" className="block text-sm font-semibold text-cream mb-1.5">
+                <label htmlFor="ft-name" className="block text-sm font-semibold text-charcoal mb-1.5">
                   Your Name *
                 </label>
                 <input
                   id="ft-name"
                   type="text"
                   required
-                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                  className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal placeholder:text-charcoal/30"
                   placeholder="John Doe"
                 />
               </div>
               <div>
-                <label htmlFor="ft-event" className="block text-sm font-semibold text-cream mb-1.5">
+                <label htmlFor="ft-event" className="block text-sm font-semibold text-charcoal mb-1.5">
                   Event Type *
                 </label>
                 <select
                   id="ft-event"
                   required
-                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                  className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal"
                 >
                   <option value="">Select event type</option>
                   <option>Wedding</option>
@@ -199,18 +199,18 @@ export default function FoodTruckPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="ft-date" className="block text-sm font-semibold text-cream mb-1.5">
+                <label htmlFor="ft-date" className="block text-sm font-semibold text-charcoal mb-1.5">
                   Event Date *
                 </label>
                 <input
                   id="ft-date"
                   type="date"
                   required
-                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                  className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal"
                 />
               </div>
               <div>
-                <label htmlFor="ft-guests" className="block text-sm font-semibold text-cream mb-1.5">
+                <label htmlFor="ft-guests" className="block text-sm font-semibold text-charcoal mb-1.5">
                   Number of People *
                 </label>
                 <input
@@ -218,31 +218,31 @@ export default function FoodTruckPage() {
                   type="number"
                   required
                   min="10"
-                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                  className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal placeholder:text-charcoal/30"
                   placeholder="50"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="ft-location" className="block text-sm font-semibold text-cream mb-1.5">
+              <label htmlFor="ft-location" className="block text-sm font-semibold text-charcoal mb-1.5">
                 Event Location *
               </label>
               <input
                 id="ft-location"
                 type="text"
                 required
-                className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal placeholder:text-charcoal/30"
                 placeholder="Address or venue name"
               />
             </div>
             <div>
-              <label htmlFor="ft-message" className="block text-sm font-semibold text-cream mb-1.5">
+              <label htmlFor="ft-message" className="block text-sm font-semibold text-charcoal mb-1.5">
                 Tell Us More
               </label>
               <textarea
                 id="ft-message"
                 rows={4}
-                className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream resize-y placeholder:text-cream/30"
+                className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal resize-y placeholder:text-charcoal/30"
                 placeholder="Any special requests, dietary needs, or additional details..."
               />
             </div>
@@ -252,7 +252,7 @@ export default function FoodTruckPage() {
             >
               Request a Quote
             </button>
-            <p className="text-xs text-cream/30 text-center">
+            <p className="text-xs text-charcoal/30 text-center">
               Or call Michael directly at{" "}
               <a href="tel:2677670073" className="text-gold hover:underline">267-767-0073</a>
             </p>

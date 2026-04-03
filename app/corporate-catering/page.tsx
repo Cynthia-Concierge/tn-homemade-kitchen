@@ -16,12 +16,12 @@ const benefits = [
   {
     title: "Consistent Quality",
     description: "Your team gets the same amazing food every time. We've been perfecting our recipes for over 40 years. No surprises, just consistently great food.",
-    icon: "✓",
+    icon: "\u2713",
   },
   {
     title: "Fully Customizable",
-    description: "Build a menu that works for your team. Dietary restrictions, allergies, vegetarian options — we accommodate it all. Your menu, your way.",
-    icon: "⚙",
+    description: "Build a menu that works for your team. Dietary restrictions, allergies, vegetarian options \u2014 we accommodate it all. Your menu, your way.",
+    icon: "\u2699",
   },
   {
     title: "Budget-Friendly",
@@ -31,17 +31,17 @@ const benefits = [
   {
     title: "Reliable Delivery",
     description: "On-time, every time. We know your meetings and events run on a schedule, and we make sure the food is there before your team sits down.",
-    icon: "⏰",
+    icon: "\u23F0",
   },
   {
     title: "Zero Hassle",
     description: "From ordering to cleanup, we handle everything. One point of contact, simple invoicing, and a dedicated team that knows your preferences.",
-    icon: "★",
+    icon: "\u2605",
   },
   {
     title: "Local & Fresh",
     description: "Everything is made in-house with fresh, local ingredients. No preservatives, no frozen entrees, no corporate catering shortcuts.",
-    icon: "♥",
+    icon: "\u2665",
   },
 ];
 
@@ -62,18 +62,18 @@ export default function CorporateCateringPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,165,116,0.08),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="max-w-3xl">
             <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
               Corporate Catering
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-charcoal">
               Feed Your Team<br />
               <span className="text-gold">the Homemade Way</span>
             </h1>
-            <p className="text-cream/60 text-lg mb-8 leading-relaxed">
+            <p className="text-charcoal/60 text-lg mb-8 leading-relaxed">
               Tired of the same boring corporate lunch? T&N Homemade Kitchen brings South Philly&apos;s
               best to your office. From recurring lunch programs to one-time team events, we make
               corporate catering that people actually look forward to.
@@ -87,7 +87,7 @@ export default function CorporateCateringPage() {
               </a>
               <a
                 href="mailto:michael@tnhomemadekitchen.com?subject=Corporate%20Catering%20Inquiry"
-                className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
+                className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-3 font-semibold transition-all"
               >
                 Email for a Quote
               </a>
@@ -99,7 +99,7 @@ export default function CorporateCateringPage() {
       <div className="section-divider" />
 
       {/* Why Choose T&N */}
-      <section className="py-24 md:py-32 bg-dark-light">
+      <section className="py-24 md:py-32 bg-light-card">
         <div className="max-w-6xl mx-auto px-4">
           <SectionHeading
             title="Why Companies Choose T&N"
@@ -109,13 +109,13 @@ export default function CorporateCateringPage() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="bg-dark-card p-6 border border-dark-border"
+                className="bg-white p-6 border border-light-border"
               >
                 <div className="w-12 h-12 bg-gold/10 text-gold flex items-center justify-center mb-4 text-xl font-bold">
                   {benefit.icon}
                 </div>
-                <h3 className="font-serif text-lg font-bold mb-2 text-cream">{benefit.title}</h3>
-                <p className="text-sm text-cream/50 leading-relaxed">{benefit.description}</p>
+                <h3 className="font-serif text-lg font-bold mb-2 text-charcoal">{benefit.title}</h3>
+                <p className="text-sm text-charcoal/60 leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -125,7 +125,7 @@ export default function CorporateCateringPage() {
       <div className="section-divider" />
 
       {/* Event Types */}
-      <section className="py-24 md:py-32 bg-dark">
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <SectionHeading
             title="We Cater Every Type of Event"
@@ -135,14 +135,14 @@ export default function CorporateCateringPage() {
             {eventTypes.map((event) => (
               <div
                 key={event}
-                className="flex items-center gap-3 bg-dark-card p-4 border border-dark-border"
+                className="flex items-center gap-3 bg-light-card p-4 border border-light-border"
               >
                 <div className="w-8 h-8 bg-gold/10 text-gold rounded-full flex items-center justify-center shrink-0">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="font-medium text-cream">{event}</span>
+                <span className="font-medium text-charcoal">{event}</span>
               </div>
             ))}
           </div>
@@ -152,7 +152,7 @@ export default function CorporateCateringPage() {
       <div className="section-divider" />
 
       {/* How It Works */}
-      <section className="py-24 md:py-32 bg-dark-light">
+      <section className="py-24 md:py-32 bg-light-card">
         <div className="max-w-5xl mx-auto px-4">
           <SectionHeading
             title="How It Works"
@@ -163,7 +163,7 @@ export default function CorporateCateringPage() {
               {
                 step: "1",
                 title: "Tell Us About Your Needs",
-                description: "Call Michael or send us an email with your event details — headcount, dietary needs, budget, and date. We'll put together a custom proposal.",
+                description: "Call Michael or send us an email with your event details \u2014 headcount, dietary needs, budget, and date. We'll put together a custom proposal.",
               },
               {
                 step: "2",
@@ -173,15 +173,15 @@ export default function CorporateCateringPage() {
               {
                 step: "3",
                 title: "Sit Back & Enjoy",
-                description: "We handle everything — preparation, delivery, setup, and cleanup. You just focus on your event while your team enjoys amazing food.",
+                description: "We handle everything \u2014 preparation, delivery, setup, and cleanup. You just focus on your event while your team enjoys amazing food.",
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
                 <div className="w-16 h-16 bg-gold/20 text-gold rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold font-serif border border-gold/30">
                   {item.step}
                 </div>
-                <h3 className="font-serif text-xl font-bold mb-2 text-cream">{item.title}</h3>
-                <p className="text-sm text-cream/50 leading-relaxed">{item.description}</p>
+                <h3 className="font-serif text-xl font-bold mb-2 text-charcoal">{item.title}</h3>
+                <p className="text-sm text-charcoal/60 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -195,10 +195,10 @@ export default function CorporateCateringPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-red-800 to-red-900" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.1),transparent_70%)]" />
         <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-charcoal">
             Get a Corporate Catering Quote
           </h2>
-          <p className="text-cream/60 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-charcoal/60 text-lg mb-8 max-w-xl mx-auto">
             Let&apos;s talk about feeding your team. Whether it&apos;s a one-time event or a recurring program,
             we&apos;ll create a custom plan that works for you.
           </p>
@@ -217,7 +217,7 @@ export default function CorporateCateringPage() {
             </a>
             <Link
               href="/catering"
-              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
+              className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
             >
               View Catering Menu
             </Link>

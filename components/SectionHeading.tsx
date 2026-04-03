@@ -5,7 +5,7 @@ interface SectionHeadingProps {
   light?: boolean;
 }
 
-export default function SectionHeading({ title, subtitle, centered = true, light = true }: SectionHeadingProps) {
+export default function SectionHeading({ title, subtitle, centered = true, light = false }: SectionHeadingProps) {
   return (
     <div className={centered ? "text-center" : ""}>
       <h2

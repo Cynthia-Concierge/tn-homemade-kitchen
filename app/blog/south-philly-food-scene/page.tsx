@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function BlogPost() {
   return (
     <>
-      <article className="pt-32 pb-16 md:pt-40 md:pb-24 bg-dark">
+      <article className="pt-32 pb-16 md:pt-40 md:pb-24 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <Link
             href="/blog"
@@ -24,16 +24,16 @@ export default function BlogPost() {
 
           <div className="flex items-center gap-3 mb-4">
             <span className="text-xs font-semibold text-gold bg-gold/10 px-3 py-1 rounded-full">Food Culture</span>
-            <span className="text-xs text-cream/30">March 15, 2026</span>
-            <span className="text-xs text-cream/30">5 min read</span>
+            <span className="text-xs text-charcoal/30">March 15, 2026</span>
+            <span className="text-xs text-charcoal/30">5 min read</span>
           </div>
 
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6 leading-tight">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6 leading-tight">
             The South Philly Food Scene: Why This Neighborhood Still Has the Best Eats in the City
           </h1>
 
           <div className="prose prose-lg max-w-none">
-            <div className="space-y-6 text-cream/60 leading-relaxed">
+            <div className="space-y-6 text-charcoal/60 leading-relaxed">
               <p>
                 There&apos;s a reason people from all over Philadelphia &mdash; and far beyond &mdash; make the
                 trip to South Philly when they want real food. This isn&apos;t a neighborhood of trends and
@@ -41,7 +41,7 @@ export default function BlogPost() {
                 doing things the right way.
               </p>
 
-              <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
+              <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
                 The Italian Market: Where It All Starts
               </h2>
               <p>
@@ -51,7 +51,7 @@ export default function BlogPost() {
                 a farmers market that shows up on Saturdays &mdash; this is everyday life in South Philly.
               </p>
 
-              <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
+              <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
                 The Corner Deli: A Dying Art?
               </h2>
               <p>
@@ -67,7 +67,7 @@ export default function BlogPost() {
                 know your order before you open your mouth.
               </p>
 
-              <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
+              <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
                 New Energy, Same Soul
               </h2>
               <p>
@@ -83,7 +83,7 @@ export default function BlogPost() {
                 neighborhood institution in the first place.
               </p>
 
-              <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
+              <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
                 Come Taste the Difference
               </h2>
               <p>
@@ -95,8 +95,8 @@ export default function BlogPost() {
             </div>
           </div>
 
-          <div className="mt-12 p-6 bg-dark-card rounded-2xl border border-dark-border">
-            <p className="text-sm text-cream/50 mb-4">
+          <div className="mt-12 p-6 bg-light-card rounded-2xl border border-light-border">
+            <p className="text-sm text-charcoal/60 mb-4">
               Want to bring the South Philly experience to your next event?
             </p>
             <div className="flex flex-wrap gap-3">
@@ -108,7 +108,7 @@ export default function BlogPost() {
               </Link>
               <a
                 href="tel:2677670073"
-                className="border border-cream/20 text-cream hover:border-gold hover:text-gold px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
+                className="border border-light-border text-charcoal hover:border-gold hover:text-gold px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
               >
                 Call Michael: 267-767-0073
               </a>

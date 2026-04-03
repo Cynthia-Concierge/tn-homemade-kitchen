@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function BlogPost() {
   return (
     <>
-      <article className="pt-32 pb-16 md:pt-40 md:pb-24 bg-dark">
+      <article className="pt-32 pb-16 md:pt-40 md:pb-24 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <Link
             href="/blog"
@@ -24,15 +24,15 @@ export default function BlogPost() {
 
           <div className="flex items-center gap-3 mb-4">
             <span className="text-xs font-semibold text-gold bg-gold/10 px-3 py-1 rounded-full">Events</span>
-            <span className="text-xs text-cream/30">February 10, 2026</span>
-            <span className="text-xs text-cream/30">6 min read</span>
+            <span className="text-xs text-charcoal/30">February 10, 2026</span>
+            <span className="text-xs text-charcoal/30">6 min read</span>
           </div>
 
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-cream mb-6 leading-tight">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6 leading-tight">
             Why Food Trucks Are the Hottest Wedding Trend in Philadelphia
           </h1>
 
-          <div className="space-y-6 text-cream/60 leading-relaxed">
+          <div className="space-y-6 text-charcoal/60 leading-relaxed">
             <p>
               The traditional sit-down wedding dinner with its rubber chicken and overcooked salmon
               is finally getting the competition it deserves. More and more couples in the
@@ -40,7 +40,7 @@ export default function BlogPost() {
               actually remember: a food truck.
             </p>
 
-            <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
+            <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
               It&apos;s Not Just a Trend &mdash; It&apos;s a Better Experience
             </h2>
             <p>
@@ -56,7 +56,7 @@ export default function BlogPost() {
               sitting under a heat lamp.
             </p>
 
-            <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
+            <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
               The Late-Night Snack That Steals the Show
             </h2>
             <p>
@@ -71,7 +71,7 @@ export default function BlogPost() {
               still dancing. The photos alone are worth it.
             </p>
 
-            <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
+            <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
               Budget-Friendly Without Feeling Cheap
             </h2>
             <p>
@@ -84,7 +84,7 @@ export default function BlogPost() {
               event. The line moves fast, the food is hot, and everyone gets exactly what they want.
             </p>
 
-            <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
+            <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
               Perfect for Outdoor Venues
             </h2>
             <p>
@@ -95,13 +95,13 @@ export default function BlogPost() {
               your guests.
             </p>
 
-            <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
+            <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
               How to Book a Food Truck for Your Wedding
             </h2>
             <p>
               If you&apos;re considering a food truck for your wedding, here are a few tips:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-cream/50">
+            <ul className="list-disc pl-6 space-y-2 text-charcoal/60">
               <li>Book early &mdash; 6 to 8 weeks minimum for peak season (April through November).</li>
               <li>Confirm the venue allows food trucks and check on any power or parking requirements.</li>
               <li>Do a tasting beforehand so you know exactly what your guests will experience.</li>
@@ -109,7 +109,7 @@ export default function BlogPost() {
               <li>Ask about package deals that include setup, service, and cleanup.</li>
             </ul>
 
-            <h2 className="font-serif text-2xl font-bold text-cream mt-8 mb-4">
+            <h2 className="font-serif text-2xl font-bold text-charcoal mt-8 mb-4">
               The Jeet? Mobile: Wedding-Ready
             </h2>
             <p>
@@ -124,9 +124,9 @@ export default function BlogPost() {
             </p>
           </div>
 
-          <div className="mt-12 p-6 bg-dark-card rounded-2xl border border-dark-border">
-            <h3 className="font-serif text-lg font-bold mb-2 text-cream">Book the Jeet? Mobile for Your Wedding</h3>
-            <p className="text-sm text-cream/50 mb-4">
+          <div className="mt-12 p-6 bg-white rounded-2xl border border-light-border">
+            <h3 className="font-serif text-lg font-bold mb-2 text-charcoal">Book the Jeet? Mobile for Your Wedding</h3>
+            <p className="text-sm text-charcoal/60 mb-4">
               Let&apos;s make your big day delicious. Call Michael or fill out our booking form to get started.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -138,7 +138,7 @@ export default function BlogPost() {
               </Link>
               <a
                 href="tel:2677670073"
-                className="border border-cream/20 text-cream hover:border-gold hover:text-gold px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
+                className="border border-light-border text-charcoal hover:border-gold hover:text-gold px-6 py-2.5 rounded-full text-sm font-semibold transition-all"
               >
                 Call Michael: 267-767-0073
               </a>

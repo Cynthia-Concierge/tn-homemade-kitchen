@@ -46,11 +46,11 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Blog</h1>
-          <p className="text-cream/60 text-lg max-w-xl mx-auto">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-charcoal">Blog</h1>
+          <p className="text-charcoal/60 text-lg max-w-xl mx-auto">
             Food stories, catering tips, and South Philly culture from the T&N kitchen.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function BlogPage() {
       <div className="section-divider" />
 
       {/* Posts */}
-      <section className="py-24 md:py-32 bg-dark-light">
+      <section className="py-24 md:py-32 bg-light-card">
         <div className="max-w-4xl mx-auto px-4">
           <SectionHeading
             title="Latest Posts"
@@ -69,22 +69,22 @@ export default function BlogPage() {
             {posts.map((post) => (
               <article
                 key={post.slug}
-                className="bg-dark-card overflow-hidden border border-dark-border hover:border-gold/30 transition-colors"
+                className="bg-white overflow-hidden border border-light-border hover:border-gold/30 transition-colors"
               >
                 <div className="p-6 md:p-8">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs font-semibold text-gold bg-gold/10 px-3 py-1 rounded-full">
                       {post.category}
                     </span>
-                    <span className="text-xs text-cream/30">{post.date}</span>
-                    <span className="text-xs text-cream/30">{post.readTime}</span>
+                    <span className="text-xs text-charcoal/30">{post.date}</span>
+                    <span className="text-xs text-charcoal/30">{post.readTime}</span>
                   </div>
                   <Link href={`/blog/${post.slug}`}>
-                    <h2 className="font-serif text-xl md:text-2xl font-bold text-cream mb-3 hover:text-gold transition-colors">
+                    <h2 className="font-serif text-xl md:text-2xl font-bold text-charcoal mb-3 hover:text-gold transition-colors">
                       {post.title}
                     </h2>
                   </Link>
-                  <p className="text-cream/50 leading-relaxed mb-4">
+                  <p className="text-charcoal/60 leading-relaxed mb-4">
                     {post.excerpt}
                   </p>
                   <Link

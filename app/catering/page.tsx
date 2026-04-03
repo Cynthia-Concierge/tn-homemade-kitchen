@@ -99,7 +99,7 @@ export default function CateringPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -107,8 +107,8 @@ export default function CateringPage() {
               <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
                 Full-Service Catering
               </p>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Catering Menu</h1>
-              <p className="text-cream/60 text-lg max-w-2xl mx-auto lg:mx-0 mb-8">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-charcoal">Catering Menu</h1>
+              <p className="text-charcoal/60 text-lg max-w-2xl mx-auto lg:mx-0 mb-8">
                 From intimate dinners to 500-person events, T&N Homemade Kitchen brings the homemade
                 difference to every catering order. Everything made fresh, in-house, with love.
               </p>
@@ -123,7 +123,7 @@ export default function CateringPage() {
                   href="https://www.ezcater.com/brand/pvt/t-and-n-homemade-kitchen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
+                  className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Order on ezCater
                 </a>
@@ -145,7 +145,7 @@ export default function CateringPage() {
       <div className="section-divider" />
 
       {/* Menu Sections */}
-      <section className="py-24 md:py-32 bg-dark">
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-5xl mx-auto px-4 space-y-16">
           {cateringSections.map((section) => (
             <div key={section.title}>
@@ -154,13 +154,13 @@ export default function CateringPage() {
                 {section.items.map((item) => (
                   <div
                     key={item.name}
-                    className="bg-dark-card p-5 border border-dark-border hover:border-gold/30 transition-colors"
+                    className="bg-white p-5 border border-light-border hover:border-gold/30 transition-colors"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1">
-                        <h3 className="font-serif text-base font-bold text-cream">{item.name}</h3>
+                        <h3 className="font-serif text-base font-bold text-charcoal">{item.name}</h3>
                         {item.description && (
-                          <p className="text-sm text-cream/50 mt-1">{item.description}</p>
+                          <p className="text-sm text-charcoal/60 mt-1">{item.description}</p>
                         )}
                       </div>
                       {item.price && (
@@ -180,7 +180,7 @@ export default function CateringPage() {
       <div className="section-divider" />
 
       {/* Service Options */}
-      <section className="py-24 md:py-32 bg-dark-light">
+      <section className="py-24 md:py-32 bg-light-card">
         <div className="max-w-5xl mx-auto px-4">
           <SectionHeading
             title="Service Options"
@@ -188,12 +188,12 @@ export default function CateringPage() {
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {serviceOptions.map((option, i) => (
-              <div key={option.title} className="text-center p-6 bg-dark-card border border-dark-border">
+              <div key={option.title} className="text-center p-6 bg-white border border-light-border">
                 <div className="w-12 h-12 bg-gold/10 text-gold rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold font-serif">
                   {i + 1}
                 </div>
-                <h3 className="font-serif text-lg font-bold mb-2 text-cream">{option.title}</h3>
-                <p className="text-sm text-cream/50">{option.description}</p>
+                <h3 className="font-serif text-lg font-bold mb-2 text-charcoal">{option.title}</h3>
+                <p className="text-sm text-charcoal/60">{option.description}</p>
               </div>
             ))}
           </div>
@@ -203,7 +203,7 @@ export default function CateringPage() {
       <div className="section-divider" />
 
       {/* Rentals */}
-      <section className="py-24 md:py-32 bg-dark">
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <SectionHeading
             title="Rentals & Add-Ons"
@@ -213,15 +213,15 @@ export default function CateringPage() {
             {rentals.map((item) => (
               <div
                 key={item.name}
-                className="bg-dark-card p-5 border border-dark-border"
+                className="bg-white p-5 border border-light-border"
               >
                 <div className="flex justify-between items-start gap-2">
-                  <h3 className="font-semibold text-cream">{item.name}</h3>
+                  <h3 className="font-semibold text-charcoal">{item.name}</h3>
                   {item.price && (
                     <span className="text-gold font-bold text-sm whitespace-nowrap">{item.price}</span>
                   )}
                 </div>
-                <p className="text-sm text-cream/50 mt-1">{item.description}</p>
+                <p className="text-sm text-charcoal/60 mt-1">{item.description}</p>
               </div>
             ))}
           </div>
@@ -235,10 +235,10 @@ export default function CateringPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-red-800 to-red-900" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.1),transparent_70%)]" />
         <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-charcoal">
             Ready to Get a Quote?
           </h2>
-          <p className="text-cream/60 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-charcoal/60 text-lg mb-8 max-w-xl mx-auto">
             Tell us about your event and we&apos;ll put together a custom catering package that fits your
             needs and budget. No event is too big or too small.
           </p>
@@ -251,13 +251,13 @@ export default function CateringPage() {
             </a>
             <a
               href="mailto:michael@tnhomemadekitchen.com"
-              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
+              className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
             >
               Email for a Quote
             </a>
             <Link
               href="/corporate-catering"
-              className="text-cream/40 hover:text-gold px-4 py-4 text-lg font-medium transition-colors underline"
+              className="text-charcoal/40 hover:text-gold px-4 py-4 text-lg font-medium transition-colors underline"
             >
               Corporate Catering
             </Link>

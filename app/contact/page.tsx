@@ -15,11 +15,11 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Contact Us</h1>
-          <p className="text-cream/60 text-lg max-w-xl mx-auto">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-charcoal">Contact Us</h1>
+          <p className="text-charcoal/60 text-lg max-w-xl mx-auto">
             Have a question? Want to place a catering order? We&apos;d love to hear from you.
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function ContactPage() {
       <div className="section-divider" />
 
       {/* Contact Info + Form */}
-      <section className="py-24 md:py-32 bg-dark-light">
+      <section className="py-24 md:py-32 bg-light-card">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Info Side */}
@@ -45,8 +45,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-cream mb-1">Address</h3>
-                    <p className="text-cream/50">
+                    <h3 className="font-semibold text-charcoal mb-1">Address</h3>
+                    <p className="text-charcoal/60">
                       1820 W. Moyamensing Ave<br />
                       Philadelphia, PA 19145
                     </p>
@@ -61,16 +61,16 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-cream mb-1">Phone</h3>
+                    <h3 className="font-semibold text-charcoal mb-1">Phone</h3>
                     <div className="space-y-1">
-                      <a href="tel:2154621095" className="block text-cream/50 hover:text-gold transition-colors">
-                        <span className="font-medium text-cream/70">Restaurant:</span> 215-462-1095
+                      <a href="tel:2154621095" className="block text-charcoal/60 hover:text-gold transition-colors">
+                        <span className="font-medium text-charcoal/70">Restaurant:</span> 215-462-1095
                       </a>
-                      <a href="tel:2677670073" className="block text-cream/50 hover:text-gold transition-colors">
-                        <span className="font-medium text-cream/70">Catering (Michael):</span> 267-767-0073
+                      <a href="tel:2677670073" className="block text-charcoal/60 hover:text-gold transition-colors">
+                        <span className="font-medium text-charcoal/70">Catering (Michael):</span> 267-767-0073
                       </a>
-                      <p className="text-cream/30">
-                        <span className="font-medium text-cream/40">Fax:</span> 215-462-7090
+                      <p className="text-charcoal/30">
+                        <span className="font-medium text-charcoal/40">Fax:</span> 215-462-7090
                       </p>
                     </div>
                   </div>
@@ -84,8 +84,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-cream mb-1">Email</h3>
-                    <a href="mailto:michael@tnhomemadekitchen.com" className="text-cream/50 hover:text-gold transition-colors">
+                    <h3 className="font-semibold text-charcoal mb-1">Email</h3>
+                    <a href="mailto:michael@tnhomemadekitchen.com" className="text-charcoal/60 hover:text-gold transition-colors">
                       michael@tnhomemadekitchen.com
                     </a>
                   </div>
@@ -99,8 +99,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-cream mb-1">Hours</h3>
-                    <div className="text-cream/50 space-y-0.5">
+                    <h3 className="font-semibold text-charcoal mb-1">Hours</h3>
+                    <div className="text-charcoal/60 space-y-0.5">
                       <p>Monday - Friday: 6:30am - 2:00pm</p>
                       <p>Saturday - Sunday: 8:00am - 2:00pm</p>
                     </div>
@@ -115,12 +115,12 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-cream mb-1">Follow Us</h3>
+                    <h3 className="font-semibold text-charcoal mb-1">Follow Us</h3>
                     <a
                       href="https://www.instagram.com/tnhomemadekitchen"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-cream/50 hover:text-gold transition-colors"
+                      className="text-charcoal/60 hover:text-gold transition-colors"
                     >
                       @tnhomemadekitchen on Instagram
                     </a>
@@ -132,53 +132,53 @@ export default function ContactPage() {
             {/* Form Side */}
             <div>
               <SectionHeading title="Send Us a Message" centered={false} />
-              <form className="bg-dark-card p-6 md:p-8 border border-dark-border space-y-5">
+              <form className="bg-white p-6 md:p-8 border border-light-border space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="c-name" className="block text-sm font-semibold text-cream mb-1.5">
+                    <label htmlFor="c-name" className="block text-sm font-semibold text-charcoal mb-1.5">
                       Name *
                     </label>
                     <input
                       id="c-name"
                       type="text"
                       required
-                      className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                      className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal placeholder:text-charcoal/30"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="c-email" className="block text-sm font-semibold text-cream mb-1.5">
+                    <label htmlFor="c-email" className="block text-sm font-semibold text-charcoal mb-1.5">
                       Email *
                     </label>
                     <input
                       id="c-email"
                       type="email"
                       required
-                      className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                      className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal placeholder:text-charcoal/30"
                       placeholder="you@email.com"
                     />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="c-phone" className="block text-sm font-semibold text-cream mb-1.5">
+                    <label htmlFor="c-phone" className="block text-sm font-semibold text-charcoal mb-1.5">
                       Phone
                     </label>
                     <input
                       id="c-phone"
                       type="tel"
-                      className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                      className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal placeholder:text-charcoal/30"
                       placeholder="(215) 555-0123"
                     />
                   </div>
                   <div>
-                    <label htmlFor="c-topic" className="block text-sm font-semibold text-cream mb-1.5">
+                    <label htmlFor="c-topic" className="block text-sm font-semibold text-charcoal mb-1.5">
                       Topic *
                     </label>
                     <select
                       id="c-topic"
                       required
-                      className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                      className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal"
                     >
                       <option value="">Select a topic</option>
                       <option>General Inquiry</option>
@@ -190,14 +190,14 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="c-message" className="block text-sm font-semibold text-cream mb-1.5">
+                  <label htmlFor="c-message" className="block text-sm font-semibold text-charcoal mb-1.5">
                     Message *
                   </label>
                   <textarea
                     id="c-message"
                     rows={5}
                     required
-                    className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream resize-y placeholder:text-cream/30"
+                    className="w-full px-4 py-3 bg-white border border-light-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-charcoal resize-y placeholder:text-charcoal/30"
                     placeholder="Tell us how we can help..."
                   />
                 </div>
@@ -216,10 +216,10 @@ export default function ContactPage() {
       <div className="section-divider" />
 
       {/* Map */}
-      <section className="bg-dark">
+      <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 py-16">
           <SectionHeading title="Find Us" subtitle="1820 W. Moyamensing Ave, Philadelphia, PA 19145" />
-          <div className="rounded-2xl overflow-hidden border border-dark-border shadow-lg shadow-black/30">
+          <div className="rounded-2xl overflow-hidden border border-light-border shadow-lg shadow-black/5">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.123!2d-75.1775!3d39.9251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c62f3e60c73f%3A0x5c7c9c5c75f7c0!2s1820+W+Moyamensing+Ave%2C+Philadelphia%2C+PA+19145!5e0!3m2!1sen!2sus!4v1"
               width="100%"
