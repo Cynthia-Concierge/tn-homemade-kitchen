@@ -47,7 +47,7 @@ export default function ReservationsPage() {
             subtitle="Choose booth or counter seating and let us know when you're coming."
           />
 
-          <form className="bg-dark-card rounded-2xl p-6 md:p-8 border border-dark-border space-y-6">
+          <form className="bg-dark-card p-6 md:p-8 border border-dark-border space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="r-name" className="block text-sm font-semibold text-cream mb-1.5">
@@ -57,7 +57,7 @@ export default function ReservationsPage() {
                   id="r-name"
                   type="text"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
                   placeholder="Your name"
                 />
               </div>
@@ -69,7 +69,7 @@ export default function ReservationsPage() {
                   id="r-phone"
                   type="tel"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
                   placeholder="(215) 555-0123"
                 />
               </div>
@@ -82,14 +82,14 @@ export default function ReservationsPage() {
               <div className="grid grid-cols-2 gap-4">
                 <label className="relative cursor-pointer">
                   <input type="radio" name="seating" value="booth" className="peer sr-only" defaultChecked />
-                  <div className="p-4 rounded-xl border-2 border-dark-border peer-checked:border-gold peer-checked:bg-gold/5 text-center transition-all">
+                  <div className="p-4 border-2 border-dark-border peer-checked:border-gold peer-checked:bg-gold/5 text-center transition-all">
                     <span className="text-2xl block mb-1">🪑</span>
                     <span className="font-semibold text-cream">Booth</span>
                   </div>
                 </label>
                 <label className="relative cursor-pointer">
                   <input type="radio" name="seating" value="counter" className="peer sr-only" />
-                  <div className="p-4 rounded-xl border-2 border-dark-border peer-checked:border-gold peer-checked:bg-gold/5 text-center transition-all">
+                  <div className="p-4 border-2 border-dark-border peer-checked:border-gold peer-checked:bg-gold/5 text-center transition-all">
                     <span className="text-2xl block mb-1">🍽</span>
                     <span className="font-semibold text-cream">Counter</span>
                   </div>
@@ -105,7 +105,7 @@ export default function ReservationsPage() {
                 <select
                   id="r-guests"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
                 >
                   <option value="">Select</option>
                   {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
@@ -122,7 +122,7 @@ export default function ReservationsPage() {
                   id="r-date"
                   type="date"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
                 />
               </div>
               <div>
@@ -132,7 +132,7 @@ export default function ReservationsPage() {
                 <select
                   id="r-time"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
                 >
                   <option value="">Select</option>
                   <option>6:30 AM</option>
@@ -161,7 +161,7 @@ export default function ReservationsPage() {
               <textarea
                 id="r-message"
                 rows={3}
-                className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream resize-y placeholder:text-cream/30"
+                className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream resize-y placeholder:text-cream/30"
                 placeholder="Any special requests or notes..."
               />
             </div>
@@ -173,7 +173,7 @@ export default function ReservationsPage() {
               Request Reservation
             </button>
 
-            <div className="bg-dark rounded-xl p-4 text-center border border-dark-border">
+            <div className="bg-dark p-4 text-center border border-dark-border">
               <p className="text-xs text-cream/40">
                 <span className="font-semibold text-cream/60">Please Note:</span> Please arrive promptly at your reserved time.
                 We reserve the right to seat other guests during busy hours if you are more than 10 minutes late.

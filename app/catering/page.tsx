@@ -115,7 +115,7 @@ export default function CateringPage() {
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                 <a
                   href="tel:2677670073"
-                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
+                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 font-semibold transition-colors"
                 >
                   Call Michael: 267-767-0073
                 </a>
@@ -123,13 +123,13 @@ export default function CateringPage() {
                   href="https://www.ezcater.com/brand/pvt/t-and-n-homemade-kitchen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+                  className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Order on ezCater
                 </a>
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden h-64 md:h-96 shadow-2xl shadow-black/40">
+            <div className="relative overflow-hidden h-64 md:h-96 shadow-2xl shadow-black/40">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1555244162-803834f70033?w=800&q=80"
@@ -154,7 +154,7 @@ export default function CateringPage() {
                 {section.items.map((item) => (
                   <div
                     key={item.name}
-                    className="bg-dark-card rounded-xl p-5 border border-dark-border hover:border-gold/30 transition-colors"
+                    className="bg-dark-card p-5 border border-dark-border hover:border-gold/30 transition-colors"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1">
@@ -188,7 +188,7 @@ export default function CateringPage() {
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {serviceOptions.map((option, i) => (
-              <div key={option.title} className="text-center p-6 rounded-2xl bg-dark-card border border-dark-border">
+              <div key={option.title} className="text-center p-6 bg-dark-card border border-dark-border">
                 <div className="w-12 h-12 bg-gold/10 text-gold rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold font-serif">
                   {i + 1}
                 </div>
@@ -213,7 +213,7 @@ export default function CateringPage() {
             {rentals.map((item) => (
               <div
                 key={item.name}
-                className="bg-dark-card rounded-xl p-5 border border-dark-border"
+                className="bg-dark-card p-5 border border-dark-border"
               >
                 <div className="flex justify-between items-start gap-2">
                   <h3 className="font-semibold text-cream">{item.name}</h3>
@@ -245,13 +245,13 @@ export default function CateringPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:2677670073"
-              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 text-lg font-semibold transition-colors"
             >
               Call Michael: 267-767-0073
             </a>
             <a
               href="mailto:michael@tnhomemadekitchen.com"
-              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
             >
               Email for a Quote
             </a>

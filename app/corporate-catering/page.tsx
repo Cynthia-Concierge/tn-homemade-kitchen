@@ -81,13 +81,13 @@ export default function CorporateCateringPage() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="tel:2677670073"
-                className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
+                className="bg-gold hover:bg-gold-light text-dark px-8 py-3 font-semibold transition-colors"
               >
                 Call Michael: 267-767-0073
               </a>
               <a
                 href="mailto:michael@tnhomemadekitchen.com?subject=Corporate%20Catering%20Inquiry"
-                className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+                className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
               >
                 Email for a Quote
               </a>
@@ -109,9 +109,9 @@ export default function CorporateCateringPage() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="bg-dark-card rounded-2xl p-6 border border-dark-border"
+                className="bg-dark-card p-6 border border-dark-border"
               >
-                <div className="w-12 h-12 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-4 text-xl font-bold">
+                <div className="w-12 h-12 bg-gold/10 text-gold flex items-center justify-center mb-4 text-xl font-bold">
                   {benefit.icon}
                 </div>
                 <h3 className="font-serif text-lg font-bold mb-2 text-cream">{benefit.title}</h3>
@@ -135,7 +135,7 @@ export default function CorporateCateringPage() {
             {eventTypes.map((event) => (
               <div
                 key={event}
-                className="flex items-center gap-3 bg-dark-card rounded-xl p-4 border border-dark-border"
+                className="flex items-center gap-3 bg-dark-card p-4 border border-dark-border"
               >
                 <div className="w-8 h-8 bg-gold/10 text-gold rounded-full flex items-center justify-center shrink-0">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -205,19 +205,19 @@ export default function CorporateCateringPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:2677670073"
-              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 text-lg font-semibold transition-colors"
             >
               Call Michael: 267-767-0073
             </a>
             <a
               href="mailto:michael@tnhomemadekitchen.com?subject=Corporate%20Catering%20Quote"
-              className="bg-cream text-dark hover:bg-cream-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-cream text-dark hover:bg-cream-dark px-8 py-4 text-lg font-semibold transition-colors"
             >
               Email for a Quote
             </a>
             <Link
               href="/catering"
-              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
             >
               View Catering Menu
             </Link>

@@ -113,13 +113,13 @@ export default function Home() {
           <div className="relative z-20 flex flex-wrap justify-center gap-4 mt-8">
             <Link
               href="/catering"
-              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors shadow-lg shadow-gold/20"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 text-lg font-semibold transition-colors shadow-lg shadow-gold/20"
             >
               Order Catering
             </Link>
             <Link
               href="/food-truck"
-              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
             >
               Book Food Truck
             </Link>
@@ -149,7 +149,7 @@ export default function Home() {
             {featuredItems.map((item) => (
               <div
                 key={item.name}
-                className="bg-dark-card rounded-2xl overflow-hidden border border-dark-border hover:border-gold/30 transition-all group"
+                className="bg-dark-card overflow-hidden border border-dark-border hover:border-gold/30 transition-all group"
               >
                 <div className="w-full h-48 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -197,7 +197,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((item) => (
               <div key={item.title} className="text-center">
-                <div className="w-16 h-16 bg-gold/10 text-gold rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gold/10 text-gold flex items-center justify-center mx-auto mb-4">
                   {item.icon}
                 </div>
                 <h3 className="font-serif text-xl font-bold mb-2 text-cream">{item.title}</h3>
@@ -214,7 +214,7 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-dark">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl overflow-hidden h-80 md:h-[500px]">
+            <div className="relative overflow-hidden h-80 md:h-[500px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1555244162-803834f70033?w=800&q=80"
@@ -238,13 +238,13 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/catering"
-                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
+                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 font-semibold transition-colors"
                 >
                   View Catering Menu
                 </Link>
                 <a
                   href="tel:2677670073"
-                  className="border border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+                  className="border border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Call Michael
                 </a>
@@ -275,19 +275,19 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/food-truck"
-                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
+                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 font-semibold transition-colors"
                 >
                   Book the Food Truck
                 </Link>
                 <a
                   href="tel:2677670073"
-                  className="border border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+                  className="border border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Call Michael
                 </a>
               </div>
             </div>
-            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden h-80 md:h-[450px]">
+            <div className="order-1 lg:order-2 relative overflow-hidden h-80 md:h-[450px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=800&q=80"
@@ -329,7 +329,7 @@ export default function Home() {
             ].map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="bg-dark-card p-6 rounded-2xl border border-dark-border"
+                className="bg-dark-card p-6 border border-dark-border"
               >
                 <div className="flex gap-1 text-gold mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -368,7 +368,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:2154621095"
-              className="bg-cream text-dark hover:bg-cream-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-cream text-dark hover:bg-cream-dark px-8 py-4 text-lg font-semibold transition-colors"
             >
               Call 215-462-1095
             </a>
@@ -376,13 +376,13 @@ export default function Home() {
               href="https://slicelife.com/restaurants/pa/philadelphia/19145/t-n-homemade-kitchen/menu"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 text-lg font-semibold transition-colors"
             >
               Order Online
             </a>
             <Link
               href="/contact"
-              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
             >
               Contact Us
             </Link>

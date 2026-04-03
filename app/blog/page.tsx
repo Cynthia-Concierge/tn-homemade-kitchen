@@ -69,7 +69,7 @@ export default function BlogPage() {
             {posts.map((post) => (
               <article
                 key={post.slug}
-                className="bg-dark-card rounded-2xl overflow-hidden border border-dark-border hover:border-gold/30 transition-colors"
+                className="bg-dark-card overflow-hidden border border-dark-border hover:border-gold/30 transition-colors"
               >
                 <div className="p-6 md:p-8">
                   <div className="flex items-center gap-3 mb-3">

@@ -84,7 +84,7 @@ export default function AboutPage() {
       <section className="py-24 md:py-32 bg-dark-light">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl overflow-hidden h-80 shadow-2xl shadow-black/40">
+            <div className="relative overflow-hidden h-80 shadow-2xl shadow-black/40">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80"
@@ -164,7 +164,7 @@ export default function AboutPage() {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="bg-dark-card rounded-2xl p-6 border border-dark-border"
+                className="bg-dark-card p-6 border border-dark-border"
               >
                 <h3 className="font-serif text-lg font-bold mb-2 text-cream">{value.title}</h3>
                 <p className="text-sm text-cream/50 leading-relaxed">{value.description}</p>
@@ -191,13 +191,13 @@ export default function AboutPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full text-lg font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-4 text-lg font-semibold transition-colors"
             >
               Get in Touch
             </Link>
             <Link
               href="/catering"
-              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 rounded-full text-lg font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
             >
               View Catering Menu
             </Link>

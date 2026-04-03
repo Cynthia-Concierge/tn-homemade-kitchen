@@ -68,19 +68,19 @@ export default function FoodTruckPage() {
               <div className="flex flex-wrap gap-4">
                 <a
                   href="tel:2677670073"
-                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
+                  className="bg-gold hover:bg-gold-light text-dark px-8 py-3 font-semibold transition-colors"
                 >
                   Book the Truck: 267-767-0073
                 </a>
                 <a
                   href="mailto:michael@tnhomemadekitchen.com?subject=Food%20Truck%20Booking%20Inquiry"
-                  className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+                  className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Email Michael
                 </a>
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden h-64 md:h-96 shadow-2xl shadow-black/40">
+            <div className="relative overflow-hidden h-64 md:h-96 shadow-2xl shadow-black/40">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=800&q=80"
@@ -109,7 +109,7 @@ export default function FoodTruckPage() {
             {eventTypes.map((event) => (
               <div
                 key={event.title}
-                className="bg-dark-card rounded-2xl p-6 border border-dark-border hover:border-gold/30 transition-colors"
+                className="bg-dark-card p-6 border border-dark-border hover:border-gold/30 transition-colors"
               >
                 <span className="text-3xl block mb-3">{event.icon}</span>
                 <h3 className="font-serif text-lg font-bold mb-2 text-cream">{event.title}</h3>
@@ -140,7 +140,7 @@ export default function FoodTruckPage() {
             ].map((photo, i) => (
               <div
                 key={i}
-                className="aspect-square rounded-2xl overflow-hidden border border-dark-border"
+                className="aspect-square overflow-hidden border border-dark-border"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -163,7 +163,7 @@ export default function FoodTruckPage() {
             title="Book the Jeet? Mobile"
             subtitle="Fill out the form below and Michael will get back to you within 24 hours."
           />
-          <form className="bg-dark-card rounded-2xl p-6 md:p-8 border border-dark-border space-y-6">
+          <form className="bg-dark-card p-6 md:p-8 border border-dark-border space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="ft-name" className="block text-sm font-semibold text-cream mb-1.5">
@@ -173,7 +173,7 @@ export default function FoodTruckPage() {
                   id="ft-name"
                   type="text"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
                   placeholder="John Doe"
                 />
               </div>
@@ -184,7 +184,7 @@ export default function FoodTruckPage() {
                 <select
                   id="ft-event"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
                 >
                   <option value="">Select event type</option>
                   <option>Wedding</option>
@@ -206,7 +206,7 @@ export default function FoodTruckPage() {
                   id="ft-date"
                   type="date"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
+                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream"
                 />
               </div>
               <div>
@@ -218,7 +218,7 @@ export default function FoodTruckPage() {
                   type="number"
                   required
                   min="10"
-                  className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                  className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
                   placeholder="50"
                 />
               </div>
@@ -231,7 +231,7 @@ export default function FoodTruckPage() {
                 id="ft-location"
                 type="text"
                 required
-                className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
+                className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream placeholder:text-cream/30"
                 placeholder="Address or venue name"
               />
             </div>
@@ -242,7 +242,7 @@ export default function FoodTruckPage() {
               <textarea
                 id="ft-message"
                 rows={4}
-                className="w-full px-4 py-3 rounded-xl bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream resize-y placeholder:text-cream/30"
+                className="w-full px-4 py-3 bg-dark border border-dark-border focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-cream resize-y placeholder:text-cream/30"
                 placeholder="Any special requests, dietary needs, or additional details..."
               />
             </div>

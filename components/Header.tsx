@@ -58,7 +58,7 @@ export default function Header() {
           <img
             src="http://www.tnhomemadekitchen.com/wp-content/uploads/2018/03/TN-Logo.png"
             alt="T&N Homemade Kitchen Logo"
-            className="h-12 w-12 rounded-full bg-cream p-0.5"
+            className="h-12 w-12 bg-cream p-0.5"
             width={48}
             height={48}
           />
@@ -78,14 +78,14 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-cream/80 hover:text-gold px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-white/5"
+              className="text-cream/80 hover:text-gold px-3 py-2 text-sm font-medium transition-colors hover:bg-white/5"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="/catering"
-            className="ml-3 bg-gold hover:bg-gold-light text-dark px-5 py-2 rounded-full text-sm font-semibold transition-colors"
+            className="ml-3 bg-gold hover:bg-gold-light text-dark px-5 py-2 text-sm font-semibold transition-colors"
           >
             Order Catering
           </Link>
@@ -126,13 +126,13 @@ export default function Header() {
             <Link
               href="/catering"
               onClick={() => setMobileOpen(false)}
-              className="bg-gold hover:bg-gold-light text-dark px-5 py-3 rounded-full text-center text-sm font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-5 py-3 text-center text-sm font-semibold transition-colors"
             >
               Order Catering
             </Link>
             <a
               href="tel:2154621095"
-              className="border border-cream/20 text-cream px-5 py-3 rounded-full text-center text-sm font-semibold hover:bg-white/5 transition-colors"
+              className="border border-cream/20 text-cream px-5 py-3 text-center text-sm font-semibold hover:bg-white/5 transition-colors"
             >
               Call 215-462-1095
             </a>

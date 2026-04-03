@@ -76,7 +76,7 @@ export default function MenuPage() {
                 Everything made in-house, from scratch, every single day. Fresh ingredients, no preservatives, no shortcuts.
               </p>
             </div>
-            <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 shadow-2xl shadow-black/40">
+            <div className="relative overflow-hidden h-64 md:h-80 shadow-2xl shadow-black/40">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80"
@@ -110,7 +110,7 @@ export default function MenuPage() {
                 {section.items.map((item) => (
                   <div
                     key={item.name}
-                    className="bg-dark-card rounded-xl p-5 border border-dark-border hover:border-gold/30 transition-colors"
+                    className="bg-dark-card p-5 border border-dark-border hover:border-gold/30 transition-colors"
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div>
@@ -147,13 +147,13 @@ export default function MenuPage() {
               href="https://slicelife.com/restaurants/pa/philadelphia/19145/t-n-homemade-kitchen/menu"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gold hover:bg-gold-light text-dark px-8 py-3 rounded-full font-semibold transition-colors"
+              className="bg-gold hover:bg-gold-light text-dark px-8 py-3 font-semibold transition-colors"
             >
               Order Online (Slice)
             </a>
             <Link
               href="/catering"
-              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 rounded-full font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
             >
               View Catering Menu
             </Link>
