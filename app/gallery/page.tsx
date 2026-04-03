@@ -34,11 +34,11 @@ export default function GalleryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-charcoal">Gallery</h1>
-          <p className="text-charcoal/60 text-lg max-w-xl mx-auto">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Gallery</h1>
+          <p className="text-cream/60 text-lg max-w-xl mx-auto">
             A look at the food, the events, and the people that make T&N Homemade Kitchen special.
           </p>
         </div>
@@ -67,8 +67,8 @@ export default function GalleryPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-sm font-semibold text-charcoal block">{item.label}</span>
-                  <span className="text-xs text-charcoal/60">{item.category}</span>
+                  <span className="text-sm font-semibold text-cream block">{item.label}</span>
+                  <span className="text-xs text-cream/50">{item.category}</span>
                 </div>
               </div>
             ))}
@@ -97,8 +97,8 @@ export default function GalleryPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-red-800 to-red-900" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.1),transparent_70%)]" />
         <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-charcoal">Like What You See?</h2>
-          <p className="text-charcoal/60 mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-cream">Like What You See?</h2>
+          <p className="text-cream/60 mb-6">
             Let us bring the T&N experience to your next event.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -110,7 +110,7 @@ export default function GalleryPage() {
             </Link>
             <Link
               href="/food-truck"
-              className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-3 font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
             >
               Book the Food Truck
             </Link>

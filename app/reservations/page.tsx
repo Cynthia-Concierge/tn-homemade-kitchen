@@ -15,11 +15,11 @@ export default function ReservationsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-charcoal">Reservations</h1>
-          <p className="text-charcoal/60 text-lg max-w-xl mx-auto">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Reservations</h1>
+          <p className="text-cream/60 text-lg max-w-xl mx-auto">
             Reserve your table at T&N Homemade Kitchen. Walk-ins are always welcome, but reservations
             help us save you the perfect spot.
           </p>

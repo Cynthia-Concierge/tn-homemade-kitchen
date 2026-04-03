@@ -63,7 +63,7 @@ export default function MenuPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -71,8 +71,8 @@ export default function MenuPage() {
               <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
                 Breakfast &bull; Lunch &bull; Catering
               </p>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-charcoal">Our Menu</h1>
-              <p className="text-charcoal/60 text-lg max-w-xl mx-auto lg:mx-0">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Our Menu</h1>
+              <p className="text-cream/60 text-lg max-w-xl mx-auto lg:mx-0">
                 Everything made in-house, from scratch, every single day. Fresh ingredients, no preservatives, no shortcuts.
               </p>
             </div>
@@ -138,8 +138,8 @@ export default function MenuPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-red-800 to-red-900" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.1),transparent_70%)]" />
         <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-charcoal">Hungry Yet?</h2>
-          <p className="text-charcoal/60 mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-cream">Hungry Yet?</h2>
+          <p className="text-cream/60 mb-6">
             Order online for pickup or check out our full catering menu for your next event.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -153,7 +153,7 @@ export default function MenuPage() {
             </a>
             <Link
               href="/catering"
-              className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-3 font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
             >
               View Catering Menu
             </Link>

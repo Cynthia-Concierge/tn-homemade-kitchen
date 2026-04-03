@@ -99,7 +99,7 @@ export default function CateringPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -107,8 +107,8 @@ export default function CateringPage() {
               <p className="text-gold font-semibold tracking-widest uppercase text-sm mb-4">
                 Full-Service Catering
               </p>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-charcoal">Catering Menu</h1>
-              <p className="text-charcoal/60 text-lg max-w-2xl mx-auto lg:mx-0 mb-8">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-cream">Catering Menu</h1>
+              <p className="text-cream/60 text-lg max-w-2xl mx-auto lg:mx-0 mb-8">
                 From intimate dinners to 500-person events, T&N Homemade Kitchen brings the homemade
                 difference to every catering order. Everything made fresh, in-house, with love.
               </p>
@@ -123,7 +123,7 @@ export default function CateringPage() {
                   href="https://www.ezcater.com/brand/pvt/t-and-n-homemade-kitchen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-3 font-semibold transition-all"
+                  className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Order on ezCater
                 </a>
@@ -235,10 +235,10 @@ export default function CateringPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-red-800 to-red-900" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.1),transparent_70%)]" />
         <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-charcoal">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">
             Ready to Get a Quote?
           </h2>
-          <p className="text-charcoal/60 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-cream/60 text-lg mb-8 max-w-xl mx-auto">
             Tell us about your event and we&apos;ll put together a custom catering package that fits your
             needs and budget. No event is too big or too small.
           </p>
@@ -251,13 +251,13 @@ export default function CateringPage() {
             </a>
             <a
               href="mailto:michael@tnhomemadekitchen.com"
-              className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
             >
               Email for a Quote
             </a>
             <Link
               href="/corporate-catering"
-              className="text-charcoal/40 hover:text-gold px-4 py-4 text-lg font-medium transition-colors underline"
+              className="text-cream/40 hover:text-gold px-4 py-4 text-lg font-medium transition-colors underline"
             >
               Corporate Catering
             </Link>

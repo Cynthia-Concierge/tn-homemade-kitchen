@@ -48,7 +48,7 @@ export default function FoodTruckPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,165,116,0.1),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -60,7 +60,7 @@ export default function FoodTruckPage() {
                 South Philly&apos;s Favorite<br />
                 <span className="text-gold">Food Truck</span>
               </h1>
-              <p className="text-charcoal/60 text-lg mb-8 leading-relaxed">
+              <p className="text-cream/60 text-lg mb-8 leading-relaxed">
                 &ldquo;Jeet?&rdquo; — It&apos;s how we say &ldquo;Did you eat?&rdquo; in South Philly.
                 Our food truck brings the full T&N Homemade Kitchen experience to your event, wherever
                 you are. Same fresh, homemade food. Same family recipes. Just on wheels.
@@ -74,7 +74,7 @@ export default function FoodTruckPage() {
                 </a>
                 <a
                   href="mailto:michael@tnhomemadekitchen.com?subject=Food%20Truck%20Booking%20Inquiry"
-                  className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-3 font-semibold transition-all"
+                  className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-3 font-semibold transition-all"
                 >
                   Email Michael
                 </a>

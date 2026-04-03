@@ -58,7 +58,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-dark overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(122,0,0,0.2),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="max-w-3xl">
@@ -69,7 +69,7 @@ export default function AboutPage() {
               A South Philly Family<br />
               <span className="text-gold">Since 1980</span>
             </h1>
-            <p className="text-charcoal/60 text-lg leading-relaxed">
+            <p className="text-cream/60 text-lg leading-relaxed">
               T&N Homemade Kitchen isn&apos;t just a restaurant — it&apos;s a South Philadelphia institution.
               For over four decades, we&apos;ve been the neighborhood&apos;s kitchen, serving up homemade food
               with the kind of warmth and authenticity you can only find in a family-run spot.
@@ -93,7 +93,7 @@ export default function AboutPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent" />
               <div className="absolute bottom-4 left-4">
-                <span className="text-charcoal/70 text-sm font-serif italic">Michael Tuono, Owner</span>
+                <span className="text-cream/70 text-sm font-serif italic">Michael Tuono, Owner</span>
               </div>
             </div>
             <div>
@@ -184,7 +184,7 @@ export default function AboutPage() {
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-charcoal">
             Come Be Part of the Family
           </h2>
-          <p className="text-charcoal/60 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-cream/60 text-lg mb-8 max-w-xl mx-auto">
             Whether you&apos;re stopping by for breakfast, ordering catering for 200, or booking the food
             truck for your wedding — you&apos;re family to us.
           </p>
@@ -197,7 +197,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href="/catering"
-              className="border-2 border-light-border hover:border-gold text-charcoal hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
+              className="border-2 border-cream/20 hover:border-gold text-cream hover:text-gold px-8 py-4 text-lg font-semibold transition-all"
             >
               View Catering Menu
             </Link>
